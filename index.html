@@ -134,10 +134,21 @@
             }
 
             .card-container {
-                max-width: 450px;
-                padding: 16px;
-                margin-top: 7800px;
-            }
+    width: 100%;
+    max-width: 450px;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0; /* Valor por defecto para móvil */
+}
+
+/* Solo aplica el margen superior en pantallas grandes (PC) */
+@media (min-width: 600px) {
+    .card-container {
+        margin-top: 11800px; /* Tu valor original para PC */
+    }
+}
 
             .card-header,
             .card-body,
