@@ -1,49 +1,49 @@
 {
-  "name": "SOCIEDAD ORNITOLÓGICA SOCNAS",
+  "name": "SOCNAS",
   "short_name": "SOCNAS",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#005f00",
   "theme_color": "#005f00",
-  "description": "Carnet digital socios - Gestiona tus credenciales digitales de manera segura y accesible desde cualquier dispositivo.",
+  "description": "Federa tus pájaros Online. Asociación Ornitológica Online. Anilla federadas para ornitología, avicultura, cunicultura de raza y colombicultura.",
   "lang": "es",
   "dir": "ltr",
   "orientation": "any",
   "scope": "/",
   "icons": [
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8IxQoh1hCEUBfXpcs396KLuYCANMsXQiZWerl1h6sj5oLp1KbwhclDcVVLGWytb4_BMl22VoXMC0eh9cPhX57VbLZFbvBjQ0cynNeDZPRMlu6gUIenXHDhNW94yhGIULnh80tmJE_9Q2CMAechVON5f4-Z0avwFJvzalc_QYfqD9NsauyNRFYxqTFO1k/s1600/Logo%20Mascotas%20Rosa%20y%20Azul%20Turquesa%20%2816%29.png",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzyFYUi3X7NlM4_DZ9q2Y-M8Q_NeZoy5yTxUCBbTq90ogf3KKHdkkciXb_H1u-2IyIjCHIWs4vVGltmEd_Mxctz1JsvGymTmEXLtwkwwQXBFzO4KY0nNjZxSVQ_c1hTKCsrRtIs5waixoWJawtRkUoxQUHyvdInWjOif4uNDlfUpUUMKlO07cjEbKbhvo/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2870%29.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih5t2OgWKiJeE82bh_LnCY676s3CNUC9pPmMIYL12tP9ry4zJJ9OvxlRgO8_TJAuEwjpOUSxna3olTuGp4BE_p9bKpJ1zSPdzItlrdr9ttEwQQBacz7zMRJbiih1-XKVIn3gw4K1tOdWz2cGM2Q4_u2jGoZzlqjH4uj90ettyROrCcMN480-b1SMwZs_k/s1600/Logo%20Mascotas%20Rosa%20y%20Azul%20Turquesa%20%2815%29.png",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAozr2umwWZYFvdOBKmI6G0o_IORNDPoG1LPJSJI0y5UfD_w0MEyKgDwvjjCbk4DxVIi3k_8vDyVtNTuaVyR-rrXDJ99T9cYCRSEENt5-A8-A-36atog5RuSwCDyuKWou2X71BVXxaxGBV8g5IOdrIEZ5T-C1SLU8kbmXOOC36LP0V7jw7-hC0Ny2Hjlc/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2871%29.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdeR_OinRt7UwL9_HuoPXsIUziaZ9sULon70ZuiMvFLK61HCxlHxh0K9snbHicU_9Ha0deFRnrCm1teBRRWah-FWTjrIoB0KoJSNIwJx-W_hYeDcZhHu084pbqR89f5zZZ-vYXito9Am5FQOsu2wZpJ1-j6C00EwVyB-tSsG2IEdtrrVTECRn1S4cYXff8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2831%29.png ",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQBo_rsWzwkyB30sqPxa-7jceTcgZKXOnemFt1iEYXkyxhno5o9XDgytV1SZ29MozBfEOwxrwS2Cvgx3dUpVnREHFsjuKABcQpDlPd8mhUXZhZQ1MDLXFqyg9WUBiUJ_3wJ8-9GGHdbA86aBvnATeQmFH6ClGT_7jPMvePlJ2CaH46TuuYxlb17HvRtEo/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2876%29.png",
       "type": "image/png",
       "sizes": "720x1280",
       "label": "Inicio"
     },
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKMYLpDaz4CyI0jyurCK6O9RRiC-3DzkxdAdXrgGtuNGP-0yqNAjicXC_p-sVkVUrD6zyRYEddG0uOx_3LaZGfOg7UKMjFK1xvc2VPVV8Di_6MmDyWIs0eHTkikySAJc8QU9D_WJj5xXwgyQbGKzwinUqjvqVGSazz7JOjX6KhcBCsz0AIFbT5nuWL_Drz/s1600-rw/linkfree-joobstreet.png ",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwHMzG7lSj-E1oxbONAReCnhxpi_lpbZxG-2g1mHyk5ock_TJOq418Ov6KcrjxtW8X62kJFpozZkq3WgZxi5yAdbeu5U5AuDY7F4JBLj48KqFbGiFYzzx1PnU60GhF5gBWOpAQlNkz8j7zO7_mqJaS_IuApJKrePWdoq7DUhRiJV8_pad6e5OSpp-gO1g/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2882%29.png",
       "type": "image/png",
       "sizes": "720x1280",
       "label": "Perfil"
     },
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeOBCKFs3Q8wwzLc2ZgKLiJf_BXblGNBJQ9Ur7He1P-hvJt2Z_djW1TEhNW7ThMZ_1Cm2stdl6-qjGUUOSYF_ctZeB9pDsi2yBiYpGUWaPhv019_jiXConzM0epG26nZeQs-dxJxTvTc1aUe9zJAyq9Ye6Xu4x7Ndx89jIHNj7rMKWQ1ME6P461tzy9D4H/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2832%29.png ",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh021f8Q_W8o5zxqsNugpmV7YXQx55uQMktDH8u6CsfVBG-_wwVeH4iY4ndf-4to7sQC33fPquWnl-eJUKAoEFLIiNazb0m7Eq3OK46f34FzOYUrC97ZyDuyMSosblM1J6nBul2WvFlF7XhorUTu9hn60VuX-uOlzvUhdQOeSpSXwFl9A6ETqBLLI9bHWU/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2881%29.png",
       "type": "image/png",
       "sizes": "720x1280",
       "label": "Funciones"
     },
 
 {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9Dp-aLUvg7BQNuPnOYkE_a5sePi64e4EaoUqXRCWIbv-k3vg5mp3LQ9Wm1_eYrYLF9IDFzp7oqmqfFY3RQdycsbtDf20KiFFgWzq9v7cl83mxnkXPMZ-qWI_uNbsmbJvpp2zPRjrPDyUIrP_kPlL-y8TIkCifxlvWS4OmjNNJQMH6_mOwsGhviS24KtPG/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2833%29.png ",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3ea4LMYAFCSDu2NoK0N65xQTbKG8xWJ3I_IXesF0F_6g_SVUvdbbUTLbVN22uS3O6OGaeIjrsRZJg4vlx3UAvQI933IsaL7xzM8nDpQ-iSkpdXq-eKAeBi1cX4cgw6erSD7AiYesWz7B4WRKZFPX-WGIN6HuoKodmyZ_2SDYQSvA0CTRQTJPmgKYbmyU/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2880%29.png",
       "type": "image/png",
       "sizes": "720x1280",
       "label": "Funciones"
@@ -51,7 +51,7 @@
 
 
 {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnHasYfsTe-hdlGcbgaPUEsTWslmX8jb0pAAxpAeUkysnSvisd7SQ6wM9OBmt5cLmf0ZgkrhidzlpGjxbkgcRWbWYhk7p1yzc4vbqHR5pi2hHc1RFoS1PDpXEczsqXnERmd6yi_zEQephlBTBXjdovPRsRjsYqYqbvYEnpQwsZ3TeLs-i-5e5xWgOJKWy5/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2834%29.png ",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH5wXOp1WS7_SNtTGmD_qMYh3zeZMwfjoIMDAcqyEwMaMTyjkuf0j60M5KarQYZ_p23RiuEeDqPc6ure2qXeAOJthbl8iRbuUJgUjo39_HJtsz2anm2TpvtLfS32EBNMZgLZdByUZ96zScStNGQ7nToEM9mU1bTBrWSFYutqt5_PAHfzTs1A3HY1hyphenhyphen3U8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2879%29.png",
       "type": "image/png",
       "sizes": "720x1280",
       "label": "Funciones"
