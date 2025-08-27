@@ -1,37 +1,50 @@
-<!DOCTYPE html>
+OK. PUES AHORA A VER SI ERES CAPAZ DE ADAPTARLO A ESTE CODIGO SIN QUE NADA DEJE DE FUNCIONA INCLUIDO EL DNI QUE SIEMPRE TE LO CARGAS, LA PWA TODO DEBE SERGUIR IGUAL QUEDA CLARO? PERO CON LAS MODALES NUEVAS MODIFICADAS Y ADAPTADAS. 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Carnet Digital de Cazador - SOCNAS DIGI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap @5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Carnet Digital para socios, federaciones y asociaciones SOCNAS DIGI</title>
+
+
+  
+
+
+
+
+
+
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css ">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="img/icon.png" type="image/png">
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLUhFi8sDXyBGPQo8nUd77tRmHqf0tcIBjvdatoHCIR74mzp4OIzLvllrjWR6FNS5kx4H68Ttk7ye8fJ1iddMed0jp5phIscpFDb0GWkX0dLXJnECL7IoJ_q_5pVyneP3009eJrAb56YukoV0Q3JN2lYJdKk6Z4gdcyyWPRLt5npy96AiVQj41MTpkRF0d/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2850%29.png' rel='apple-touch-icon'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLUhFi8sDXyBGPQo8nUd77tRmHqf0tcIBjvdatoHCIR74mzp4OIzLvllrjWR6FNS5kx4H68Ttk7ye8fJ1iddMed0jp5phIscpFDb0GWkX0dLXJnECL7IoJ_q_5pVyneP3009eJrAb56YukoV0Q3JN2lYJdKk6Z4gdcyyWPRLt5npy96AiVQj41MTpkRF0d/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2850%29.png ' rel='apple-touch-icon'>
     <meta content='yes' name='apple-mobile-web-app-capable'>
     <meta content='SOCNAS DIGI' name='apple-mobile-web-app-title'>
     <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+
     <!-- Iconos iOS -->
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-6saJYjDfwZ-JrBZ8wbr5jX9CPXO4g3V3FVU2EEz85KC-8nVT0uCtTY8jee8-at90LGT4qMektbQRkCjEnoUw0BIVyEtgATKbQT3RaturL87-lLraXWAF5YrcweJgR3OsRX3kf3aoZCyVRDZoiZpasPbNp2jCB9-Q7HgC444Ky23PoK4xyT1bjsfcNxR8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2841%29.png' rel='apple-touch-icon' sizes='180x180'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXu44k9ZZpuAe8hshb77hyIsv1hQeRXeavje9LxyENG4hLlTHgud8BkA6ZiG81JIwmFXQQPN5svxWDrXLeQVtea-kmgXU1BKrW_OghQxKb2lmUBoDT6eWrcC4WCmO9uYRNBnMx8cJR35k_1AjPFHm-Gds43AXG-ESdosGwzlStaNZxtfbwFvohuh9wfzWo/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2842%29.png' rel='apple-touch-icon' sizes='167x167'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEir_1ZsA2bV6Lpn-ksRLKw2YWavDGnomTlnzm9f15lbKIaMoTfwRplvllNqQB9dcMuMvAZXD-Z60Qy5L5y9XGTD4m4lIIBZO5em_YBkkxHgyPQhWU2M70ng0WdnuZik9qrskni0QjjCmsRPt9GOo0ovBlMTYhjIEIBB4gSvNS-1AqavlPAoeLRvMtLgp22w/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2843%29.png' rel='apple-touch-icon' sizes='152x152'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtjzjleuNWB_pRvWfiyqBGbl8xAEXwsRh-IRLrjc3H2g_7wHePKVSwGdoAcYg5poP2OgP4i76RlqnUhgO3wzqLaixfi3QDFcRq55jSm3qxM7VlRbSjTPmwk5V4fuaHzMta6oMADETr6tQ99AtFsrFMjgVrJ9hAs2JDZWBKqEd5ORoEA7-6Eg8ouXpLfBq8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2844%29.png' rel='apple-touch-icon' sizes='120x120'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-6saJYjDfwZ-JrBZ8wbr5jX9CPXO4g3V3FVU2EEz85KC-8nVT0uCtTY8jee8-at90LGT4qMektbQRkCjEnoUw0BIVyEtgATKbQT3RaturL87-lLraXWAF5YrcweJgR3OsRX3kf3aoZCyVRDZoiZpasPbNp2jCB9-Q7HgC444Ky23PoK4xyT1bjsfcNxR8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2841%29.png ' rel='apple-touch-icon' sizes='180x180'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXu44k9ZZpuAe8hshb77hyIsv1hQeRXeavje9LxyENG4hLlTHgud8BkA6ZiG81JIwmFXQQPN5svxWDrXLeQVtea-kmgXU1BKrW_OghQxKb2lmUBoDT6eWrcC4WCmO9uYRNBnMx8cJR35k_1AjPFHm-Gds43AXG-ESdosGwzlStaNZxtfbwFvohuh9wfzWo/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2842%29.png ' rel='apple-touch-icon' sizes='167x167'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEir_1ZsA2bV6Lpn-ksRLKw2YWavDGnomTlnzm9f15lbKIaMoTfwRplvllNqQB9dcMuMvAZXD-Z60Qy5L5y9XGTD4m4lIIBZO5em_YBkkxHgyPQhWU2M70ng0WdnuZik9qrskni0QjjCmsRPt9GOo0ovBlMTYhjIEIBB4gSvNS-1AqavlPAoeLRvMtLgp22w/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2843%29.png ' rel='apple-touch-icon' sizes='152x152'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtjzjleuNWB_pRvWfiyqBGbl8xAEXwsRh-IRLrjc3H2g_7wHePKVSwGdoAcYg5poP2OgP4i76RlqnUhgO3wzqLaixfi3QDFcRq55jSm3qxM7VlRbSjTPmwk5V4fuaHzMta6oMADETr6tQ99AtFsrFMjgVrJ9hAs2JDZWBKqEd5ORoEA7-6Eg8ouXpLfBq8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2844%29.png ' rel='apple-touch-icon' sizes='120x120'>
+
     <!-- Splash Screens iPhone -->
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCpzk3DiaWjy3qYWZF0yBzssFnpfRfwAKYMdI88ILPdZ-OdTDxGIAKu07E37pCdwtHapxPfqwFFd6NYK7zndmfhK1ziPIs53DstDepizZVgSi6ooeF_gKySCN179vJdbf_GkI_EukFDb0IAK-ssO4Wg_eH6vfgGnYKddc_B_cKap6wnO6BFMWFVG-RDqQM/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2836%29.png' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHAn6Zear-r-KZI89i32qqcTgyK8yNQqnI8R9tqhllgTmWFTF0sYMsBK9IYl686KsTg_i-ZzoZow1I98jZ6-DIozLEvuL66HiXapCTytdHEMuM-VRbRTa_E-QpSV6FLWO4-9aVFuxGCgf_-gwj2P6GtyqgH183a1SOykdSknIgGeLYf45-OzvBVSgAOpGN/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2837%29.png' media='(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg84oOYyBoMKx0rh7D4qTOmgOHhltoKhFL-63hbzBqFl10w9Qmy46ZUKk1ttGRM3Zx7wr131K754Zl5LtWjHmybOoq1NM0ofQaDYuGpwqJ74BDhF3as70JkFZ8uR-SJp0WIsukiCFhj0c09Wh9-YbUEJy23ToWlM4oobk5HBtqdopuBZ5LbIf30z1pPOspf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2838%29.png' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2UCQR2cm-Q0ldll2vQ7w2I_m0fnfzKInRljSFTNh75OQYV76_CbHkQfYt8XQQvObx2MEsLcI_WZfGBjuA3ZPkTkT7UsMYr2Djs_1Dx_9yB8WaKkpxFYJO7cWqet1o9GkJ2DASH2GmQ-GFACyuRLrf6obmbGiT_C8EJQyT0Ex9xtp6-FYyv-pZwFB0mdx-/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2839%29.png' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMPBCwNVMi-8m0TIpZ4E-xEsNDLx00hg5jbQf3qyeMWoLe38JlyO4YmBnk4ubkoWvGWUfNamMvsJudOXWT3qhHpt-M2lewPm6sjWaU5k278TDdGpITKxGW61pq-PV6gyo-mPTm1aojZSHpahKAmkC88_q3Ppw5wPhaUBo3PmIpVVXdzUznBKxzychEPImf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2840%29.png' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCpzk3DiaWjy3qYWZF0yBzssFnpfRfwAKYMdI88ILPdZ-OdTDxGIAKu07E37pCdwtHapxPfqwFFd6NYK7zndmfhK1ziPIs53DstDepizZVgSi6ooeF_gKySCN179vJdbf_GkI_EukFDb0IAK-ssO4Wg_eH6vfgGnYKddc_B_cKap6wnO6BFMWFVG-RDqQM/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2836%29.png ' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHAn6Zear-r-KZI89i32qqcTgyK8yNQqnI8R9tqhllgTmWFTF0sYMsBK9IYl686KsTg_i-ZzoZow1I98jZ6-DIozLEvuL66HiXapCTytdHEMuM-VRbRTa_E-QpSV6FLWO4-9aVFuxGCgf_-gwj2P6GtyqgH183a1SOykdSknIgGeLYf45-OzvBVSgAOpGN/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2837%29.png ' media='(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg84oOYyBoMKx0rh7D4qTOmgOHhltoKhFL-63hbzBqFl10w9Qmy46ZUKk1ttGRM3Zx7wr131K754Zl5LtWjHmybOoq1NM0ofQaDYuGpwqJ74BDhF3as70JkFZ8uR-SJp0WIsukiCFhj0c09Wh9-YbUEJy23ToWlM4oobk5HBtqdopuBZ5LbIf30z1pPOspf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2838%29.png ' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2UCQR2cm-Q0ldll2vQ7w2I_m0fnfzKInRljSFTNh75OQYV76_CbHkQfYt8XQQvObx2MEsLcI_WZfGBjuA3ZPkTkT7UsMYr2Djs_1Dx_9yB8WaKkpxFYJO7cWqet1o9GkJ2DASH2GmQ-GFACyuRLrf6obmbGiT_C8EJQyT0Ex9xtp6-FYyv-pZwFB0mdx-/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2839%29.png ' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMPBCwNVMi-8m0TIpZ4E-xEsNDLx00hg5jbQf3qyeMWoLe38JlyO4YmBnk4ubkoWvGWUfNamMvsJudOXWT3qhHpt-M2lewPm6sjWaU5k278TDdGpITKxGW61pq-PV6gyo-mPTm1aojZSHpahKAmkC88_q3Ppw5wPhaUBo3PmIpVVXdzUznBKxzychEPImf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2840%29.png ' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+
     <style>
-        :root {
-            --primary-color: #2c5f2d;
-            --primary-light: #d5f5d4;
-            --secondary-color: #f8f9fa;
+      :root {
+            --primary-color: #de4753;
+            --primary-light: #ffd4d7;
+            --secondary-color: #f0f0f0;
             --text-color: #333;
-            --text-light: #555;
+            --text-light: #777;
             --bg-color: #fff;
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
@@ -42,6 +55,7 @@
             margin: 0;
             padding: 0;
         }
+
         html, body {
             width: 100%;
             height: 100%;
@@ -50,6 +64,7 @@
             background-color: var(--secondary-color);
             overflow-x: hidden;
         }
+
         body {
             display: flex;
             flex-direction: column;
@@ -58,6 +73,7 @@
             padding: 0;
             margin: 0;
         }
+
         .card-container {
             width: 100%;
             max-width: 450px;
@@ -66,10 +82,17 @@
             display: flex;
             flex-direction: column;
         }
+
         .card {
             background: 
-                linear-gradient(#FFFFFFCC, #FFFFFFCC),
-                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggYVwXPOXo1WFd5gVp4cwWM3v_nD9tJvURBCzct7ixP0qzoByeFLLtVvNuInrp0Ew1HeEc8_yuHGGwy6615NuB5sYbLZ1SIBoZHvggLRUNHKsV-zlFigCtgQuJrFegtKhBTi8oUVfgkU1GyUI7mT-57QdmIu15yLVW2_Q7rzqPjspIA-EUfsrMk0mSyZKV/s1600/A%C3%B1adir%20un%20poco%20de%20texto%20-%202025-07-07T081828.493.png') center/cover no-repeat;
+                
+        linear-gradient(
+            #FFFFFFCC,  /* Blanco con 80% de opacidad */
+            #FFFFFFCC
+        ),
+        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggYVwXPOXo1WFd5gVp4cwWM3v_nD9tJvURBCzct7ixP0qzoByeFLLtVvNuInrp0Ew1HeEc8_yuHGGwy6615NuB5sYbLZ1SIBoZHvggLRUNHKsV-zlFigCtgQuJrFegtKhBTi8oUVfgkU1GyUI7mT-57QdmIu15yLVW2_Q7rzqPjspIA-EUfsrMk0mSyZKV/s1600/A%C3%B1adir%20un%20poco%20de%20texto%20-%202025-07-07T081828.493.png') center/cover no-repeat;
+                
+           
             width: 100%;
             max-width: 100%;
             margin: 0 auto;
@@ -78,6 +101,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         .card-header,
         .card-body,
         .card-footer {
@@ -85,54 +109,70 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
         .card-header {
-            background: 
-                linear-gradient(333deg, #00000066, #000000E6),
-                url('https://media.istockphoto.com/id/1301911854/es/foto/cazador-y-su-perro-con-presa-al-atardecer.jpg?s=612x612&w=0&k=20&c=W9vsoK0D1S5gPHI9-lbeHC8ckytnIhDxr7xO7Fxl27Q=') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: 20px 0 !important;
-            width: 100%;
-            box-sizing: border-box;
-            position: relative;
+    background: 
+        /* Gradiente con colores HEX + opacidad (usando #RRGGBBAA) */
+        linear-gradient(
+            0deg, 
+            #cc3b4799,  /* CC = 80% opacidad (equivalente a rgba(26, 58, 50, 0.8)) */
+            #000000E6   /* E6 = 90% opacidad */
+        ),
+        /* Imagen de fondo (cambia la URL) */
+        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-Fdj0C2CesOhd2qDOztkfFcuyNVyu8MTaQeLfWCN21IUz_NY_UoEUYkco2kErOrhambxmQltgUixPhO3b2GNrfmgxoMvDDxh_aVBAdP9BifwoI381cJWNmQmm4oLOcNm5Alo3wJzmXEMuKZxZx2avOeaZ-kCjy3O_9hc8TFS4RE0hHUMZOt_AIRIycvU/s1600/489453348_1280619703870222_5704119463758955707_n.jpg') center/cover no-repeat;
+
+    /* Asegura que el texto se vea bien */
+    color: white;
+    text-align: center;
+    padding: 20px 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .card {
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .card-header,
+            .card-body,
+            .card-footer {
+                padding: 15px;
+            }
         }
-        .qr-corner {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 8px;
-            padding: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+        @media (min-width: 600px) {
+            body {
+                padding: 20px;
+                justify-content: center;
+            }
         }
-        .qr-corner img {
-            width: 100%;
-            height: 100%;
+
+        img, iframe, video, svg {
+            max-width: 100%;
+            height: auto;
         }
-        .logo-corner {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 50px;
-            height: 50px;
-            background: #d5f5d4;
-            border-radius: 8px;
-            padding: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            z-index: 2;
+
+        .modal-content,
+        .custom-modal-content {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            max-width: 100%;
+            border-radius: 0;
         }
-        .logo-corner img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+
         .profile-section {
             position: relative;
             margin-bottom: 15px;
         }
+
         .profile-pic {
             width: 100px;
             height: 100px;
@@ -143,22 +183,53 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .profile-pic img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
+        .profile-actions {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+
+        #btn-descargar {
+            background: var(--primary-light);
+            border: none;
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #btn-descargar svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--primary-color);
+        }
+
         .card-header h1 {
             font-size: 1.4rem;
             margin-bottom: 5px;
             font-weight: 600;
             line-height: 1.2;
         }
+
         .card-header p {
             font-size: 0.9rem;
             opacity: 0.9;
             margin-bottom: 15px;
         }
+
         .badges {
             display: flex;
             justify-content: center;
@@ -166,6 +237,7 @@
             margin-top: 10px;
             flex-wrap: wrap;
         }
+
         .badge {
             padding: 4px 8px;
             border-radius: 20px;
@@ -175,20 +247,24 @@
             align-items: center;
             gap: 4px;
         }
+
         .badge.verified {
             background-color: rgba(76, 209, 55, 0.2);
             color: #47cc69;
         }
+
         .badge.premium {
             background-color: rgba(255, 215, 0, 0.2);
             color: gold;
         }
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 12px;
             margin: 15px 0;
         }
+
         .social-icon {
             width: 36px;
             height: 36px;
@@ -202,25 +278,47 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
+
         .social-icon:hover {
             transform: translateY(-3px);
         }
+
+        .qr-corner {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 8px;
+            padding: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .qr-corner img {
+            width: 100%;
+            height: 100%;
+        }
+
         .card-body {
             padding: 15px;
             flex: 1;
         }
+
         .info-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 15px;
         }
+
         .info-block {
             flex: 1 1 calc(50% - 5px)!important;
-            min-width: calc(50% - 5px)!important;
             box-sizing: border-box;
             position: relative;
+            min-width: calc(50% - 5px)!important;
         }
+
         .label {
             font-size: 11px;
             color: var(--primary-color);
@@ -228,7 +326,9 @@
             text-align: left;
             font-weight: 500;
         }
-        .value {
+
+        .value,
+        .dni-field {
             background-color: var(--primary-light);
             color: var(--primary-color);
             font-weight: bold;
@@ -239,9 +339,11 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             user-select: none;
             font-size: 13px;
-            cursor: pointer;
             position: relative;
+            overflow: visible;
+            margin-bottom: 8px;
         }
+
         .icon-button {
             position: absolute;
             right: 8px;
@@ -262,6 +364,24 @@
             color: var(--primary-color);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .dni-input-password {
+            display: none;
+            margin-top: 6px;
+            width: 100%;
+            padding: 8px;
+            font-size: 13px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            color: var(--text-color);
+            background-color: white;
+        }
+
+        .dni-text {
+            display: block;
+            width: 100%;
+        }
+
         .card-footer {
             padding: 12px 15px;
             border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -269,17 +389,20 @@
             flex-direction: column;
             gap: 12px;
         }
+
         .footer-credits {
             text-align: center;
             font-size: 0.75rem;
             color: var(--text-light);
         }
+
         .footer-actions {
             display: flex;
             gap: 8px;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .action-btn {
             padding: 8px 12px;
             border: none;
@@ -296,14 +419,15 @@
             width: 100%;
             justify-content: center;
         }
+
         .action-btn.secondary {
             background-color: transparent;
             border: 1px solid var(--primary-color);
             color: var(--primary-color);
         }
 
-        /* Modales */
-        .modal, .custom-modal {
+        .modal,
+        .custom-modal {
             display: none;
             position: fixed;
             top: 0;
@@ -315,27 +439,32 @@
             align-items: flex-end;
             justify-content: center;
         }
-        .modal.active, .custom-modal.active {
+
+        .modal.active,
+        .custom-modal.active {
             display: flex;
         }
-        .modal-content, .custom-modal-content {
+
+        .modal-content,
+        .custom-modal-content {
             width: 100%;
             max-width: 450px;
             background: white;
             border-radius: var(--border-radius);
             padding: 20px;
+            overflow-y: auto;
             animation: slideUp 0.4s ease-out;
+            position: relative;
             margin: 0 auto;
-            max-height: 90vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
         }
+
         @keyframes slideUp {
             from { transform: translateY(100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-        .modal-close, .custom-modal-close {
+
+        .modal-close,
+        .custom-modal-close {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -348,19 +477,17 @@
             border-radius: 50%;
             cursor: pointer;
             border: none;
-            z-index: 10;
         }
-        .modal-title, .custom-modal-title {
+
+        .modal-title,
+        .custom-modal-title {
             color: var(--primary-color);
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
         }
+
         .modal-text {
             color: var(--text-color);
             font-size: 14px;
@@ -368,7 +495,8 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        .modal-action, .custom-modal-action {
+
+        .modal-action {
             display: block;
             width: 100%;
             padding: 12px;
@@ -384,1038 +512,1166 @@
             text-align: center;
         }
 
-        /* Estilos para modales mejoradas */
-        .modal-body-scrollable {
-            max-height: 60vh;
-            overflow-y: auto;
-            padding: 10px 0;
-        }
-
-        .status-badge {
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-
-        .status-badge.active {
-            background-color: #d4edda;
-            color: #155724;
-        }
-
-        .status-badge.expired {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-
-        .info-section {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .info-section:last-child {
-            border-bottom: none;
-        }
-
-        .info-section h3 {
-            font-size: 1rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-
-        .detail-label {
-            font-weight: 500;
-            color: var(--text-light);
-        }
-
-        .detail-value {
-            font-weight: 600;
-        }
-
-        .chip-list {
+        .custom-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px;
         }
 
-        .chip {
+        .custom-block {
+            flex: 1;
+            min-width: calc(50% - 5px)!important;
+            max-width: 500px;
+            cursor: pointer;
+        }
+
+        .custom-label {
+            font-size: 11px;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .custom-value {
             background-color: var(--primary-light);
             color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 16px;
-            font-size: 0.8rem;
-        }
-
-        .document-thumbs {
-            display: flex;
-            gap: 15px;
-        }
-
-        .doc-thumb {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .doc-thumb i {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .doc-thumb span {
-            font-size: 0.8rem;
-        }
-
-        .coverage-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .coverage-list li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-
-        .coverage-list i {
-            color: #28a745;
-            margin-right: 8px;
-        }
-
-        .emergency-contacts {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .emergency-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: #f8f9fa;
+            font-weight: bold;
+            padding: 12px 35px 12px 12px;
             border-radius: 8px;
-        }
-
-        .emergency-item i:first-child {
-            font-size: 1.2rem;
-            color: #dc3545;
-            margin-right: 10px;
-        }
-
-        .emergency-item div {
-            flex: 1;
-        }
-
-        .emergency-item strong {
-            display: block;
-            font-size: 0.9rem;
-        }
-
-        .emergency-item p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .call-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .doc-download-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 12px;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            color: var(--text-color);
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .modal-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            background-color: var(--primary-color);
-            color: white;
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
-
-        .modal-btn.secondary {
-            background-color: #6c757d;
-        }
-
-        .license-qr {
             text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .license-qr img {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 10px;
-        }
-
-        .license-qr p {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .weapon-gallery {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            user-select: none;
+            font-size: 13px;
+            position: relative;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .weapon-item {
-            display: flex;
-            gap: 15px;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
+        .custom-button-icon {
+            width: 18px;
+            height: 18px;
         }
 
-        .weapon-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
+        .custom-icon-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+
+        .custom-map-container,
+        .custom-video-container {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .weapon-image img {
+        .custom-map-container {
+            height: 250px;
+        }
+
+        .custom-map-container iframe,
+        .custom-video-container iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border: none;
         }
 
-        .weapon-details {
-            flex: 1;
+        .custom-video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
         }
 
-        .weapon-details h4 {
-            margin: 0 0 5px 0;
-            font-size: 0.9rem;
-        }
-
-        .weapon-details p {
-            margin: 0;
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        /* Modal para mostrar la foto de la licencia física */
-        .license-photo-modal {
-            display: none;
-            position: fixed;
+        .custom-video-container iframe {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            z-index: 100000;
-            justify-content: center;
-            align-items: center;
         }
 
-        .license-photo-modal.active {
-            display: flex;
-        }
-
-        .license-photo-container {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-
-        .license-photo-container img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        .license-photo-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
+        .custom-modal-action {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
             color: white;
-            font-size: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 15px;
             cursor: pointer;
-            background: rgba(0, 0, 0, 0.5);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: none;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .card-header,
-            .card-body,
-            .card-footer {
-                padding: 15px;
-            }
-        }
         @media (min-width: 600px) {
+            body {
+                justify-content: center;
+                padding: 40px 20px;
+            }
+
+            .card-container {
+                max-width: 450px;
+                padding: 16px;
+                margin-top: 450px;
+            }
+
+            .card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--card-shadow);
+            }
+
+            .card-header {
+                padding: 25px;
+            }
+
             .profile-pic {
                 width: 120px;
                 height: 120px;
             }
+
             .card-header h1 {
                 font-size: 1.8rem;
             }
-            .value {
+
+            .value,
+            .dni-field {
                 font-size: 14px;
                 padding: 15px;
             }
+
             .social-icon {
                 width: 42px;
                 height: 42px;
                 font-size: 18px;
             }
-            .qr-corner, .logo-corner {
+
+            .qr-corner {
                 width: 60px;
                 height: 60px;
             }
+
+            .custom-value {
+                padding: 15px 40px 15px 15px;
+                font-size: 14px;
+            }
+
+            .custom-button-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            .custom-map-container {
+                height: 350px;
+            }
+
+            .footer-actions {
+                flex-direction: row;
+            }
+
+            .action-btn {
+                width: auto;
+                flex: 1;
+                max-width: 200px;
+            }
+        }
+
+
+
+/* Icono dentro del botón */
+.custom-button-icon {
+  width: 20px;
+  height: 20px;
+  fill: #de4753;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+
+        
+
+/* ESTILOS DEL REVERSO (COPIA ESTO TAL CUAL) */
+    #reverso-movil {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #de4753;
+      z-index: 1000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .contenedor-logos {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .logo-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .logo-circular img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+    /* DETECCIÓN INFALIBLE DE MÓVIL HORIZONTAL */
+    @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+      #reverso-movil {
+        display: flex;
+      }
+    }
+
+        .logo-corner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    background: #ffd4d7;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.logo-corner img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+ 
+
+  #dniPasswordField {
+    width: 170px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #de4753;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+
+        
+        
+    </style>
+
+
+
+<!-- Estilos del banner PWA -->
+    <style>
+        #pwa-install-container {
+            display: none;
+            background: #ffffff;
+            border-radius: 8px;
+            margin: 15px auto;
+            max-width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            padding: 12px 20px;
+        }
+        .browser-instruction {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
     </style>
+
+
+
+
+
+
+    
+    
 </head>
 <body>
-    <div class="card-container">
-        <div class="card" id="capture-area">
-            <div class="card-header">
-                <div class="qr-corner">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo_RSc485hqL6upKQe_S00sTHIRaFFAkRCkO1hkExeWVZEdC7CekTX4bczfPjviz9qROzorBcJmP8o0UzWer7cnjVSzq_kn5VvY_GjaWhcBO4eD2GGwR0d40pgI95T5hfvDq72o0nzkx8GUizNUNCaZSfW1Zwt2FH_ytc-j79j8VT4SswkAJTU3_amR1k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2883%29.png" alt="QR">
-                </div>
-                <div class="logo-corner">
-                    <img src="https://fesacocur.es/wp-content/uploads/2015/09/logo-fesacocur-redondo.png" alt="Federación">
-                </div>
-                <div class="profile-section">
-                    <div class="profile-pic">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" alt="Foto cazador">
-                    </div>
-                </div>
-                <h1 id="name">Carlos Ruiz Montes</h1>
-                <p id="title">Cazador Federado</p>
-                <div class="badges">
-                    <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
-                    <span class="badge premium"><i class="fas fa-certificate"></i> Licencia Activa</span>
-                </div>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fas fa-map-marker-alt"></i></a>
+<div class="card-container">
+    <div class="card" id="capture-area">
+        <div class="card-header">
+            <div class="qr-corner">
+                <img alt="" border="0" data-original-height="1200" data-original-width="1200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo_RSc485hqL6upKQe_S00sTHIRaFFAkRCkO1hkExeWVZEdC7CekTX4bczfPjviz9qROzorBcJmP8o0UzWer7cnjVSzq_kn5VvY_GjaWhcBO4eD2GGwR0d40pgI95T5hfvDq72o0nzkx8GUizNUNCaZSfW1Zwt2FH_ytc-j79j8VT4SswkAJTU3_amR1k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2883%29.png" alt="Qr" id="profile-img">
+            </div>
+<div class="logo-corner">
+  <img src="https://fesacocur.es/wp-content/uploads/2015/09/logo-fesacocur-redondo.png" alt="Logo">
+</div>
+
+            
+            <div class="profile-section">
+                <div class="profile-pic">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" alt="Foto de perfil" id="profile-img">
                 </div>
             </div>
-
-            <div class="card-body">
-                <div class="info-container">
-                    <div class="info-block">
-                        <div class="label">Nº LICENCIA</div>
-                        <div class="value" onclick="openModal('licencia')">
-                            EX-2024-8876
-                            <span class="icon-button" onclick="event.stopPropagation(); openModal('licencia')">i</span>
-                        </div>
+            <h1 id="name">José María Mera Beltrán</h1>
+            <p id="title">Criador Nacional Certificado</p>
+            <div class="badges">
+                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                <span class="badge premium"><i class="fas fa-crown"></i> Premium</span>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="info-container">
+                <div class="info-block">
+                    <div class="label">Nº C. NACIONAL</div>
+                    <div class="value" onclick="openModal('criador')" style="cursor: pointer; position: relative;">
+                        56G88
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('criador')">i</span>
                     </div>
-                    <div class="info-block">
-                        <div class="label">FEDERACIÓN</div>
-                        <div class="value" onclick="openModal('federacion')">
-                            FEXCASA
-                            <span class="icon-button" onclick="event.stopPropagation(); openModal('federacion')">i</span>
-                        </div>
-                    </div>
-                    <div class="info-block">
-                        <div class="label">SEGURO</div>
-                        <div class="value" onclick="openModal('seguro')">
-                            MAPFRE Caza 2024
-                            <span class="icon-button" onclick="event.stopPropagation(); openModal('seguro')">i</span>
-                        </div>
-                    </div>
-                    <div class="info-block">
-                        <div class="label">ARMAS REGISTRADAS</div>
-                        <div class="value" onclick="openModal('armas')">
-                            2 armas
-                            <span class="icon-button" onclick="event.stopPropagation(); openModal('armas')">i</span>
-                        </div>
-                    </div>
-                    <div class="info-block">
-                        <div class="label">DNI / NIE</div>
-                        <div id="dniField" class="value" onclick="showPasswordInput(this)">
-                            <span id="dniText">XXXXXXXX</span>
-                            <input type="password" id="dniPasswordField" placeholder="Contraseña" onkeydown="handlePassword(event)" style="display: none; width: 100%; padding: 8px; margin-top: 6px;">
-                        </div>
-                    </div>
-                    <div class="info-block">
-                        <div class="label">VENCIMIENTO</div>
-                        <div class="value" onclick="openModal('vencimiento')">
-                            31/12/2025
-                            <span class="icon-button" onclick="event.stopPropagation(); openModal('vencimiento')">i</span>
-                        </div>
+                </div>
+                <div class="info-block">
+                    <div class="label">COD. FEDERAL</div>
+                    <div class="value" onclick="openModal('federal')" style="cursor: pointer; position: relative;">
+                        E8.0595
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('federal')">i</span>
                     </div>
                 </div>
 
-                <div class="info-container">
-                    <div class="info-block" onclick="openCustomModal('map1')">
-                        <div class="label">ZONA DE CAZA</div>
-                        <div class="value">
-                            <i class="fas fa-map-marker-alt" style="color: #2c5f2d;"></i>
-                            Sierra de Aracena
-                            <span style="position: absolute; right: 10px;">→</span>
-                        </div>
+<div class="info-block">
+                    <div class="label">Nº C. NACIONAL</div>
+                    <div class="value" onclick="openModal('criador')" style="cursor: pointer; position: relative;">
+                        56G88
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('criador')">i</span>
                     </div>
-                    <div class="info-block" onclick="openCustomModal('whatsapp')">
-                        <div class="label">CONTACTO</div>
-                        <div class="value">
-                            <i class="fab fa-whatsapp" style="color: #2c5f2d;"></i>
-                            WhatsApp
-                            <span style="position: absolute; right: 10px;">→</span>
-                        </div>
+                </div>
+                <div class="info-block">
+                    <div class="label">COD. FEDERAL</div>
+                    <div class="value" onclick="openModal('federal')" style="cursor: pointer; position: relative;">
+                        E8.0595
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('federal')">i</span>
+                    </div>
+                </div>
+
+
+  
+
+
+
+
+                
+                <div class="info-block">
+  <div class="info-block">
+                    <div class="label">DNI / NIE</div>
+                    <div id="dniField" class="dni-field" onclick="showPasswordInput(this)" style="cursor: pointer; position: relative;">
+                        <span id="dniText" class="dni-text">XXXXXXXX</span>
+                        
+<input type="password" id="dniPasswordField" onkeydown="handlePassword(event)" placeholder="Introduce contraseña" />
+<p id="dniText"></p>
+
+
+                      </div> 
+                    
+
+                <div class="info-block">
+                    <div class="label">FECHA VENCIMIENTO</div>
+                    <div class="dni-field" onclick="openModal('fecha')" style="cursor: pointer; position: relative;">
+                        <span class="dni-text">12/12/2026</span>
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('fecha')">i</span>
+                    
+                </div>
+            </div>
+            <div class="info-container">
+                <div class=info-block" onclick="openCustomModal('map1')">
+                    <div class="custom-label">LOCALIZACIÓN</div>
+                    <div class="custom-value">
+                        <svg class="custom-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#de4753">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                        </svg>
+                        Huelva
+                        <span class="custom-icon-button">→</span>
+                    </div>
+                </div>
+                <div class="info-block" onclick="openCustomModal('video1')">
+                    <div class="custom-label">AVIARIO</div>
+                    <div class="custom-value">
+                        <svg class="custom-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#de4753">
+                            <path d="M10 16.5l6-4.5-6-4.5v9z"/>
+                        </svg>
+                        Mi canal
+                        <span class="custom-icon-button">→</span>
                     </div>
                 </div>
             </div>
+           <!-- Botón Avianuncios alineado con los demás -->
+<div class="info-block">
+  <div class="info-block">
+    <div class="block" onclick="openCustomModal('map2')">
+      <div class="label">SÍGUEME EN</div>
+      <div class="value">
+        <svg class="custom-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#de4753">
+          <path d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4z"/>
+          <path d="M4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4z"/>
+        </svg>
+        Avianuncios.com
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </div>
 
+
+<div class="info-block">
+  <div class="info-block">
+    <div class="block" onclick="openCustomModal('whatsapp')">
+      <div class="label">CONTÁCTAME POR</div>
+      <div class="value">
+        <svg class="custom-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#de4753">
+          <path d="M16 0C7.164 0 0 7.163 0 16c0 2.816.733 5.453 2.016 7.77L0 32l8.465-2.217A15.927 15.927 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.867c-2.452 0-4.8-.652-6.861-1.885l-.492-.287-5.019 1.313 1.34-4.892-.321-.507a13.763 13.763 0 01-2.06-7.27C2.587 8.659 8.66 2.587 16 2.587c7.34 0 13.413 6.072 13.413 13.413 0 7.34-6.073 13.414-13.413 13.414z"/>
+          <path d="M24.203 19.637l-3.404-.987c-.451-.13-.938-.006-1.27.316l-1.392 1.346c-2.63-1.395-4.758-3.52-6.152-6.151l1.346-1.392c.322-.332.447-.818.316-1.27l-.987-3.404c-.194-.667-.875-1.08-1.57-.974l-2.64.42a1.319 1.319 0 00-1.131 1.319c0 8.018 6.506 14.524 14.524 14.524.628 0 1.174-.428 1.319-1.131l.42-2.64a1.319 1.319 0 00-.974-1.57z"/>
+        </svg>
+        WhatsApp
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+      
+
+
+
+
+            
+
+
+
+
+
+
+      
+
+
+            
             <div class="card-footer">
                 <div class="footer-credits">
-                    <p>Carnet digital emitido por <strong>SOCNAS DIGI</strong></p>
+                    <p>Carnet digital emitido por <strong>SOCNAS</strong></p>
                 </div>
+            
+
+
+
+  </div>
+
+
+
+ <!-- Banner de instalación PWA -->
+    <div id="pwa-install-container">
+        <!-- Firefox -->
+        <div id="firefox-instructions" class="browser-instruction" style="display: none;">
+            <i class="fab fa-firefox" style="font-size: 22px; color: #ff7139;"></i>
+            <p style="margin: 0; color: #333; font-size: 14px;">
+                <strong style="color: #0060df;">Firefox:</strong> Toca <i class="fas fa-ellipsis-v" style="color: #555; margin: 0 4px;"></i> → <strong>"Añadir app a pantalla de inicio"</strong>
+            </p>
+        </div>
+
+        <!-- Safari iOS -->
+        <div id="ios-instructions" class="browser-instruction" style="display: none;">
+            <i class="fab fa-apple" style="font-size: 22px; color: #555;"></i>
+            <p style="margin: 0; color: #333; font-size: 14px;">
+                <strong style="color: #007aff;">iPhone/iPad:</strong> Toca <i class="fas fa-share-square" style="color: #007aff; margin: 0 4px;"></i> → <strong>"Añadir a inicio"</strong>
+            </p>
+        </div>
+
+        <!-- Samsung -->
+        <div id="samsung-instructions" class="browser-instruction" style="display: none;">
+            <i class="fas fa-mobile-alt" style="font-size: 22px; color: #1428a0;"></i>
+            <p style="margin: 0; color: #333; font-size: 14px;">
+                <strong style="color: #1428a0;">Samsung:</strong> Toca <i class="fas fa-ellipsis-v" style="color: #555; margin: 0 4px;"></i> → <strong>"Añadir página a"</strong> → <strong>"Pantalla de inicio"</strong>
+            </p>
+        </div>
+
+        <!-- Opera -->
+        <div id="opera-instructions" class="browser-instruction" style="display: none;">
+            <i class="fab fa-opera" style="font-size: 22px; color: #ff1b2d;"></i>
+            <p style="margin: 0; color: #333; font-size: 14px;">
+                <strong style="color: #ff1b2d;">Opera:</strong> Toca <i class="fas fa-ellipsis-v" style="color: #555; margin: 0 4px;"></i> → <strong>"Añadir a pantalla de inicio"</strong>
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
                 <div class="footer-actions">
                     <button class="action-btn secondary" onclick="openModal('info')">
-                        <i class="fas fa-info-circle"></i> INFORMACIÓN
+                        <i class="fas fa-info-circle"></i> ASOCIACIÓN ORNITOLÓGICA SOCNAS
                     </button>
                     <button class="action-btn" onclick="window.open('https://wa.me/34677163664', '_blank')">
-                        <i class="fas fa-comments"></i> SOPORTE
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+  <i class="fas fa-comments"></i> Centro de Soporte
+</button>
 
-    <!-- MODALES MEJORADAS -->
-    <div class="modal" id="licenciaModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">
-                <i class="fas fa-id-card"></i> Licencia de Caza 2024
-                <span class="status-badge active">Vigente</span>
-            </div>
-            
-            <div class="modal-body-scrollable">
-                <div class="license-qr">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo_RSc485hqL6upKQe_S00sTHIRaFFAkRCkO1hkExeWVZEdC7CekTX4bczfPjviz9qROzorBcJmP8o0UzWer7cnjVSzq_kn5VvY_GjaWhcBO4eD2GGwR0d40pgI95T5hfvDq72o0nzkx8GUizNUNCaZSfW1Zwt2FH_ytc-j79j8VT4SswkAJTU3_amR1k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2883%29.png" alt="QR Verificación Licencia">
-                    <p>Escanea para verificar oficialmente</p>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Datos de la Licencia</h3>
-                    <div class="detail-row">
-                        <span class="detail-label">Número:</span>
-                        <span class="detail-value">EX-2024-8876</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Titular:</span>
-                        <span class="detail-value">Carlos Ruiz Montes</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Validez:</span>
-                        <span class="detail-value">01/01/2024 - 31/12/2024</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Territorio:</span>
-                        <span class="detail-value">Extremadura</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Modalidades:</span>
-                        <span class="detail-value">Caza Mayor, Caza Menor</span>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Especies Autorizadas</h3>
-                    <div class="chip-list">
-                        <span class="chip">Jabalí</span>
-                        <span class="chip">Conejo</span>
-                        <span class="chip">Perdiz</span>
-                        <span class="chip">Liebre</span>
-                        <span class="chip">Venado</span>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Documentación Adjunta</h3>
-                    <div class="document-thumbs">
-                        <div class="doc-thumb" onclick="viewLicensePhoto('frente')">
-                            <i class="fas fa-file-image"></i>
-                            <span>Anverso</span>
-                        </div>
-                        <div class="doc-thumb" onclick="viewLicensePhoto('dorso')">
-                            <i class="fas fa-file-image"></i>
-                            <span>Reverso</span>
-                        </div>
-                        <div class="doc-thumb" onclick="viewLicensePhoto('fisica')">
-                            <i class="fas fa-camera"></i>
-                            <span>Licencia Física</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="modal-btn secondary" onclick="downloadLicense()">
-                    <i class="fas fa-download"></i> Descargar
-                </button>
-                <button class="modal-btn" onclick="verifyOnline()">
-                    <i class="fas fa-external-link-alt"></i> Verificar Online
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal para mostrar la foto de la licencia física -->
-    <div id="licensePhotoModal" class="license-photo-modal">
-        <div class="license-photo-container">
-            <span class="license-photo-close" onclick="closeLicensePhoto()">×</span>
-            <img id="licensePhotoImg" src="" alt="Licencia Física">
-        </div>
-    </div>
 
-    <div class="modal" id="federacionModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">
-                <i class="fas fa-users"></i> Federación Extremeña de Caza
-                <span class="status-badge active">Activo</span>
-            </div>
-            
-            <div class="modal-body-scrollable">
-                <div class="info-section">
-                    <h3>Datos de Afiliación</h3>
-                    <div class="detail-row">
-                        <span class="detail-label">Número Socio:</span>
-                        <span class="detail-value">FEX-8876</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Fecha Alta:</span>
-                        <span class="detail-value">15/02/2018</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Tipo:</span>
-                        <span class="detail-value">Cazador Senior</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Sección:</span>
-                        <span class="detail-value">Caza Mayor</span>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Beneficios Activos</h3>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check-circle"></i> Acceso a cotos federados</li>
-                        <li><i class="fas fa-check-circle"></i> Formación continua</li>
-                        <li><i class="fas fa-check-circle"></i> Descuentos en compras</li>
-                        <li><i class="fas fa-check-circle"></i> Participación en eventos</li>
-                    </ul>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Próximos Eventos</h3>
-                    <div class="detail-row">
-                        <span class="detail-label">25 Oct:</span>
-                        <span class="detail-value">Jornada de caza menor</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">12 Nov:</span>
-                        <span class="detail-value">Curso de seguridad</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">30 Nov:</span>
-                        <span class="detail-value">Torneo de caza mayor</span>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Contacto Federación</h3>
-                    <div class="emergency-contacts">
-                        <div class="emergency-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <strong>Atención al Socio</strong>
-                                <p>924 123 456</p>
-                            </div>
-                            <button class="call-btn" onclick="callNumber('924123456')">
-                                <i class="fas fa-phone"></i>
-                            </button>
-                        </div>
-                        <div class="emergency-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email</strong>
-                                <p>socios@fexcasa.es</p>
-                            </div>
-                            <button class="call-btn" onclick="location.href='mailto:socios@fexcasa.es'">
-                                <i class="fas fa-envelope"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="modal-btn" onclick="window.open('https://fexcasa.es', '_blank')">
-                    <i class="fas fa-globe"></i> Web Federación
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal" id="seguroModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">
-                <i class="fas fa-shield-alt"></i> Seguro de Caza
-                <span class="status-badge active">Vigente</span>
-            </div>
-            
-            <div class="modal-body-scrollable">
-                <div class="info-section">
-                    <div class="detail-row">
-                        <span class="detail-label">Aseguradora:</span>
-                        <span class="detail-value">MAPFRE</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Póliza:</span>
-                        <span class="detail-value">CAZA-2024-8876</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Cobertura:</span>
-                        <span class="detail-value">Responsabilidad Civil + Accidentes</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Validez:</span>
-                        <span class="detail-value">01/01/2024 - 31/12/2024</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Capital Asegurado:</span>
-                        <span class="detail-value">300.000€</span>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Coberturas Principales</h3>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check-circle"></i> Daños a terceros: 300.000€</li>
-                        <li><i class="fas fa-check-circle"></i> Accidentes: 30.000€</li>
-                        <li><i class="fas fa-check-circle"></i> Asistencia sanitaria: 3.000€</li>
-                        <li><i class="fas fa-check-circle"></i> Defensa jurídica: Incluida</li>
-                    </ul>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Teléfonos de Emergencia</h3>
-                    <div class="emergency-contacts">
-                        <div class="emergency-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <strong>Urgencias 24h</strong>
-                                <p>915 678 123</p>
-                            </div>
-                            <button class="call-btn" onclick="callNumber('915678123')">
-                                <i class="fas fa-phone"></i>
-                            </button>
-                        </div>
-                        <div class="emergency-item">
-                            <i class="fas fa-first-aid"></i>
-                            <div>
-                                <strong>Asistencia Médica</strong>
-                                <p>900 456 789</p>
-                            </div>
-                            <button class="call-btn" onclick="callNumber('900456789')">
-                                <i class="fas fa-phone"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Documentación</h3>
-                    <button class="doc-download-btn" onclick="downloadDocument('poliza_seguro')">
-                        <i class="fas fa-file-pdf"></i> Descargar Póliza Completa
-                    </button>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="modal-btn" onclick="showInsuranceCard()">
-                    <i class="fas fa-id-card"></i> Tarjeta de Asistencia
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="armasModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">
-                <i class="fas fa-gun"></i> Armas Registradas
-                <span class="status-badge active">2 Registradas</span>
-            </div>
-            
-            <div class="modal-body-scrollable">
-                <div class="weapon-gallery">
-                    <div class="weapon-item">
-                        <div class="weapon-image">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" alt="Escopeta Beretta">
-                        </div>
-                        <div class="weapon-details">
-                            <h4>Escopeta Beretta Silver Pigeon</h4>
-                            <p>Calibre: 12/70 · Serie: BT123456</p>
-                            <p>Licencia: X-1234-2023 · Vence: 31/12/2025</p>
-                        </div>
-                    </div>
                     
-                    <div class="weapon-item">
-                        <div class="weapon-image">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" alt="Rifle Tikka">
-                        </div>
-                        <div class="weapon-details">
-                            <h4>Rifle Tikka T3x Lite</h4>
-                            <p>Calibre: .223 Rem · Serie: TK654321</p>
-                            <p>Licencia: X-5678-2023 · Vence: 31/12/2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Documentos de Armas</h3>
-                    <button class="doc-download-btn" onclick="downloadDocument('licencia_armas')">
-                        <i class="fas fa-file-pdf"></i> Licencia de Armas
-                    </button>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modales -->
+<div class="modal" id="criadorModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-title">Criador Nacional Certificado</div>
+        <div class="modal-text">José María Mera Beltrán</div>
+        <button class="modal-action" onclick="closeModal()">C.N: 56G88</button>
+    </div>
+</div>
+
+<div class="modal" id="federalModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-title">Código Federal</div>
+        <div class="modal-text">Código Federal: E8.0595</div>
+        <button class="modal-action" onclick="closeModal()">E8.0595</button>
+    </div>
+</div>
+
+<div class="modal" id="fechaModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-title">Fecha de Vencimiento</div>
+        <div class="modal-text">Vence: 12/12/2026</div>
+        <button class="modal-action" onclick="closeModal()">ACTUALIZAR DATOS</button>
+    </div>
+</div>
+
+<div class="modal" id="infoModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-title">Información del Carnet</div>
+        <div class="modal-text">Este carnet es válido como identificación oficial.</div>
+        <button class="modal-action" onclick="closeModal()">ENTENDIDO</button>
+    </div>
+</div>
+
+<div id="custom-map1Modal" class="custom-modal">
+    <div class="custom-modal-content">
+        <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
+        <h2 class="custom-modal-title">Huelva</h2>
+        <div class="custom-modal-content-wrapper">
+            <div class="custom-map-container">
+                <iframe src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.492318649884!2d-6.945604724418628!3d37.283464172113376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11cfc1cd7be463%3A0xcf11ffd86f6b122a!2sC.%20Puerto%20Rico%2C%2021005%20Huelva!5e0!3m2!1ses!2ses!4v1752583789284!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <a class="custom-modal-action" href=" https://maps.google.com/?q=C.%20Puerto%20Rico%2C%2021005%20Huelva" target="_blank">VER EN GOOGLE MAPS</a>
+        </div>
+    </div>
+</div>
+
+<div id="custom-video1Modal" class="custom-modal">
+    <div class="custom-modal-content">
+        <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
+        <h2 class="custom-modal-title">Canaricultura - Timbrados</h2>
+        <div class="custom-modal-content-wrapper">
+            <div class="custom-video-container">
+                <iframe src=" https://www.youtube.com/embed/MZddL74nqPU " allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <a class="custom-modal-action" href="https://www.youtube.com/watch?v=MZddL74nqPU" target="_blank">VER EN YOUTUBE</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal del nuevo botón -->
+<div id="custom-map2Modal" class="custom-modal">
+    <div class="custom-modal-content">
+        <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
+        <h2 class="custom-modal-title">AVIANUNCIOS</h2>
+        <div class="custom-modal-content-wrapper">
+            <div class="custom-image-container">
+                <center>
+                    <img alt="Avianuncios Logo" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4wJNV6DTDMUrwP6SHxplHj-pTOuvvdvzlbyw1-xfrvWSSEdpLlXa_hJ4h6c7XVNv9IsBnG-eKAXUCEZATTjMbYfW7okdS1sB9WqjZpm7yfZGnh4ghbOEYtdxgGMRYoygHo_q9O1JqhYUroxGw7ou7BsnYvuUtScy4BlqtmD5Dvr2dhI0lmzWjRADWfHMo/s1600/Blue%20Snow%20%20Winter%20Sport%20Store%20Logo%20%2810%29.png " style="width: 100%; max-width: 200px;" />
+                </center>
+            </div>
+            <div class="custom-text-content">
+                <center>
+                    <h3>Título del anuncio</h3>
+                    <p>Este es un ejemplo de texto que puedes colocar en tu anuncio importante.</p>
+                </center>
+            </div>
+            <a class="custom-modal-action" href="#" target="_blank">VER MÁS INFORMACIÓN</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="custom-whatsappModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
+    <h2 class="custom-modal-title">CONTACTO POR WHATSAPP</h2>
+    <div class="custom-modal-content-wrapper">
+      <div class="custom-image-container">
+        <center>
+          <img alt="WhatsApp Logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 100%; max-width: 100px;" />
+        </center>
+      </div>
+      <div class="custom-text-content">
+        <center>
+          <h3>Envíame un mensaje</h3>
+          <p>Completa el formulario para enviarme un mensaje directo por WhatsApp.</p>
+        </center>
+        <form onsubmit="return sendWhatsAppMessage(event)">
+          <input type="text" id="name" placeholder="Tu nombre" required style="width: 100%; padding: 10px; margin-top: 10px;">
+          <textarea id="message" placeholder="Tu mensaje" required style="width: 100%; padding: 10px; margin-top: 10px;"></textarea>
+          <button type="submit" class="custom-modal-action" style="margin-top: 15px;">ENVIAR A WHATSAPP</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
             
-            <div class="modal-actions">
-                <button class="modal-btn secondary" onclick="closeModal()">
-                    <i class="fas fa-times"></i> Cerrar
-                </button>
-                <button class="modal-btn" onclick="window.open('tel:062')">
-                    <i class="fas fa-phone"></i> Contactar Guardia Civil
-                </button>
-            </div>
+
+<style>
+    #pwaTip {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 12px 15px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+        display: none;
+        z-index: 10;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        border-top: 1px solid #eee;
+        animation: slideUp 0.20s ease-out;
+    }
+
+    .pwa-banner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .pwa-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+
+    .pwa-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        flex-shrink: 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 4px;
+    }
+
+    .tip-text {
+        color: #000;
+        font-size: 14px;
+        line-height: 1.3;
+        flex-grow: 1;
+    }
+
+    #installBtn {
+        background: #74915b;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: 140px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -55px;
+        right: 13px;
+        background: #FFCDD2;
+        border: 1px solid #eee;
+        color: #000;
+        font-size: 18px;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.0s;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+    }
+
+    .close-btn:hover {
+        color: #f44336;
+        border-color: #f44336;
+        transform: rotate(90deg) scale(1.2);
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pwa-content {
+            gap: 8px;
+        }
+
+        .tip-text {
+            font-size: 13px;
+        }
+
+        #installBtn {
+            padding: 8px 15px;
+            font-size: 13px;
+            min-width: 120px;
+        }
+
+        .pwa-icon {
+            width: 46px;
+            height: 46px;
+        }
+
+        .close-btn {
+            top: -25px;
+            right: 15px;
+        }
+    }
+</style>
+
+<div id="pwaTip">
+    <div class="pwa-banner">
+        <div class="pwa-content">
+            <img alt="App Icon" class="pwa-icon" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg"/>
+            <div class="tip-text">Para una mejor experiencia</div>
         </div>
+        <button id="installBtn">
+            <i class="fas fa-mobile-alt"></i>
+            INSTALAR APP
+        </button>
+        <button class="close-btn" id="closeTip">&#215;</button>
+    </div>
+</div>
+
+<script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        document.getElementById('pwaTip').style.display = 'block';
+    });
+
+    document.getElementById('installBtn').addEventListener('click', () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    document.getElementById('pwaTip').style.display = 'none';
+                }
+                deferredPrompt = null;
+            });
+        }
+    });
+
+    document.getElementById('closeTip').addEventListener('click', () => {
+        document.getElementById('pwaTip').style.display = 'none';
+    });
+
+    window.addEventListener('appinstalled', () => {
+        document.getElementById('pwaTip').style.display = 'none';
+    });
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('✅ SW registrado'))
+            .catch(err => console.error('❌ Error SW:', err));
+    }
+</script>
+
+
+
+
+<!-- REVERSO (SOLO PARA MÓVILES) -->
+<div id="reverso-movil" style="background: #de4753 ; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div class="contenedor-logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 20px;">
+    <!-- LOGO 1 - C.O.E -->
+    <div class="logo-item" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="logo-circular" style="
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        padding: 5px;
+        border: 3px solid #fff;
+      ">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjndWr8jg9EWmfSb1hvhWY7VMZs7MUpYBZjDLzIYBZFTw3zO_kQJdLamn2j4d7vmUueq3_Jr3wInf3ra3y6_PxyVIMOmJuBnvZ7bieFlMkvc0rkZUIw3ibLwT0VtdYK7FDdyZCsY9XF_9L_8hFs5vgNCul78T8r9EDLoVMFl6YzAKuN7wDQcTt_YznylT4/s1600/logo-fesacocur-redondo%20%281%29.png" 
+             alt="FESACOCUR" 
+             style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+      </div>
+      <div class="logo-texto" style="color: white; font-size: 13px; margin-top: 10px; font-weight: 500; text-align: center;">FESACOCUR</div>
+    </div>
+    
+    <!-- LOGO 2 - SOCNAS -->
+    <div class="logo-item" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="logo-circular" style="
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        padding: 5px;
+        border: 3px solid #fff;
+      ">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiR9xC6oYPZGANzDHWHCbT36JTV32zE2geJPlsIipUc1AjBK0rzMfK0twJL6OuRL6DpaIU00BhDP-6bTkr81xNQpxhGVi0g8MaZZXv2Dx5fHbrAbCz6TbGlXIXvYgKzMR3MUpojNTHJcL_f2v7nrXU6nhi_eSiRSogrrffW2V1RzMIGkdxhyfuToLbyQ2Rf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2843%29.png" 
+             alt="SOCNAS" 
+             style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+      </div>
+      <div class="logo-texto" style="color: white; font-size: 13px; margin-top: 10px; font-weight: 500; text-align: center;">SOCNAS</div>
+    </div>
+    
+    <!-- LOGO 3 - F.O.A -->
+    <div class="logo-item" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="logo-circular" style="
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        padding: 5px;
+        border: 3px solid #fff;
+      ">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhOOIc1gzhltdEeWss-U-3QkP2GmLphFIrFFUnBsvo8o4oSDwvObbab8ZiU71mN3hEEB88Cbe7J6VBIJaayu6cdZoBYKoBXP70gaM7n20YZo9RTCpy1peuqMUTH_bSrFhHoXGlmHL3XyKUmx9gR_c5flmhz2y0ISOIS8yTLVHxEyP5bMz7x5eIZbpQ7_c/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2872%29.png" 
+             alt="SOCNAS DIGI CARNET DIGITAL PARA SOCIOS" 
+             style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+      </div>
+      <div class="logo-texto" style="color: white; font-size: 13px; margin-top: 10px; font-weight: 500; text-align: center;">SOCNA DIGI</div>
     </div>
 
-    <div class="modal" id="vencimientoModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">
-                <i class="fas fa-calendar-alt"></i> Vencimientos
-                <span class="status-badge active">Al Día</span>
-            </div>
-            
-            <div class="modal-body-scrollable">
-                <div class="info-section">
-                    <h3>Próximos Vencimientos</h3>
-                    <div class="detail-row">
-                        <span class="detail-label">Licencia Caza:</span>
-                        <span class="detail-value">31/12/2024</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Seguro:</span>
-                        <span class="detail-value">31/12/2024</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Licencia Armas:</span>
-                        <span class="detail-value">31/12/2025</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Federación:</span>
-                        <span class="detail-value">31/12/2024</span>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Recordatorios</h3>
-                    <div class="detail-row">
-                        <input type="checkbox" id="reminder1" checked>
-                        <label for="reminder1">Recordar 30 días antes</label>
-                    </div>
-                    <div class="detail-row">
-                        <input type="checkbox" id="reminder2" checked>
-                        <label for="reminder2">Recordar 7 días antes</label>
-                    </div>
-                    <div class="detail-row">
-                        <input type="checkbox" id="reminder3">
-                        <label for="reminder3">Recordar día de vencimiento</label>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Renovación de Licencia</h3>
-                    <p>Documentación necesaria para renovación:</p>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check-circle"></i> DNI/NIE en vigor</li>
-                        <li><i class="fas fa-check-circle"></i> Certificado médico</li>
-                        <li><i class="fas fa-check-circle"></i> Tasas abonadas</li>
-                        <li><i class="fas fa-check-circle"></i> Foto actualizada</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="modal-btn secondary" onclick="closeModal()">
-                    <i class="fas fa-bell"></i> Configurar Recordatorios
-                </button>
-                <button class="modal-btn" onclick="window.open('https://renovacionlicencias.es', '_blank')">
-                    <i class="fas fa-external-link-alt"></i> Renovar Online
-                </button>
-            </div>
-        </div>
-    </div>
+    
+  
+  <!-- FOOTER VERDE MEJORADO -->
+  <div class="footer" style="
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffd4d7;
+    color: #2c3e50;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 2px solid #b8d9c5;
+    font-weight: 600;
+  ">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLUhFi8sDXyBGPQo8nUd77tRmHqf0tcIBjvdatoHCIR74mzp4OIzLvllrjWR6FNS5kx4H68Ttk7ye8fJ1iddMed0jp5phIscpFDb0GWkX0dLXJnECL7IoJ_q_5pVyneP3009eJrAb56YukoV0Q3JN2lYJdKk6Z4gdcyyWPRLt5npy96AiVQj41MTpkRF0d/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2850%29.png" 
+         alt="SOCNAS DIGI" 
+         style="height: 24px;">
+    <span>Carnet digital socio by SOCNAS DIGI</span>
+  </div>
+</div>
+  <!-- SCRIPT DE DETECCIÓN (OBLIGATORIO) -->
+  <script>
+    // Fuerza la detección al cargar y girar
+    function actualizarReverso() {
+      const esMovil = window.innerWidth <= 1024;
+      const esHorizontal = window.innerWidth > window.innerHeight;
+      const reverso = document.getElementById('reverso-movil');
+      
+      if (esMovil && esHorizontal) {
+        reverso.style.display = 'flex';
+      } else {
+        reverso.style.display = 'none';
+      }
+    }
+    
+    window.addEventListener('load', actualizarReverso);
+    window.addEventListener('resize', actualizarReverso);
+    window.addEventListener('orientationchange', actualizarReverso);
+  </script>
 
-    <div class="modal" id="infoModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">
-                <i class="fas fa-info-circle"></i> Información del Carnet
-            </div>
-            
-            <div class="modal-body-scrollable">
-                <div class="info-section">
-                    <h3>Carnet Digital de Caza</h3>
-                    <p>Este carnet es válido como documento oficial de caza en todas las comunidades autónomas de España.</p>
-                    <p>Incluye toda la documentación necesaria para acreditar tu condición de cazador.</p>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Características</h3>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check-circle"></i> Licencia de caza digital</li>
-                        <li><i class="fas fa-check-circle"></i> Seguro de responsabilidad civil</li>
-                        <li><i class="fas fa-check-circle"></i> Datos de federación</li>
-                        <li><i class="fas fa-check-circle"></i> Información de armas registradas</li>
-                        <li><i class="fas fa-check-circle"></i> Documentación acreditiativa</li>
-                    </ul>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Uso Oficial</h3>
-                    <p>En caso de control, muestra el código QR al agente para que pueda verificar la validez de tu documentación.</p>
-                    <div class="license-qr">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo_RSc485hqL6upKQe_S00sTHIRaFFAkRCkO1hkExeWVZEdC7CekTX4bczfPjviz9qROzorBcJmP8o0UzWer7cnjVSzq_kn5VvY_GjaWhcBO4eD2GGwR0d40pgI95T5hfvDq72o0nzkx8GUizNUNCaZSfW1Zwt2FH_ytc-j79j8VT4SswkAJTU3_amR1k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2883%29.png" alt="QR Verificación">
-                        <p>Código de verificación oficial</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="modal-btn" onclick="closeModal()">
-                    <i class="fas fa-times"></i> Cerrar
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <!-- MODAL DE UBICACIÓN -->
-    <div id="custom-map1Modal" class="custom-modal">
-        <div class="custom-modal-content">
-            <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
-            <h2 class="custom-modal-title">Sierra de Aracena</h2>
-            <div class="custom-map-container" style="height: 250px; border-radius: 12px; overflow: hidden;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12079.5!2d-6.76!3d37.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d95d3b3b3b3b3%3A0x1234567890abcdef!2sSierra+de+Aracena!5e0!3m2!1ses!2ses!4v1752583789284" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <a class="custom-modal-action" href="https://maps.google.com/?q=Sierra+de+Aracena" target="_blank">VER EN MAPS</a>
-        </div>
-    </div>
 
-    <!-- MODAL WHATSAPP -->
-    <div id="custom-whatsappModal" class="custom-modal">
-        <div class="custom-modal-content">
-            <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
-            <h2 class="custom-modal-title">CONTACTO</h2>
-            <form onsubmit="sendWhatsAppMessage(event)">
-                <input type="text" id="nameInput" placeholder="Tu nombre" required style="width: 100%; padding: 10px; margin-top: 10px;">
-                <textarea id="messageInput" placeholder="Tu mensaje" required style="width: 100%; padding: 10px; margin-top: 10px;"></textarea>
-                <button type="submit" class="custom-modal-action">ENVIAR POR WHATSAPP</button>
-            </form>
-        </div>
-    </div>
 
-    <!-- PWA Tip -->
-    <div id="pwaTip" style="display: none;">
-        <div class="pwa-banner" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 15px; background: white; border-top: 1px solid #eee;">
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" style="width: 40px; height: 40px; border-radius: 8px;">
-                <span style="font-size: 14px; color: #333;">Instala esta app para acceso rápido</span>
-            </div>
-            <button id="installBtn" style="background: #2c5f2d; color: white; border: none; padding: 8px 12px; border-radius: 20px; font-size: 12px;">INSTALAR</button>
-            <button id="closeTip" style="background: #eee; border: none; width: 25px; height: 25px; border-radius: 50%; margin-left: 10px;">×</button>
-        </div>
-    </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Script de detección -->
     <script>
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            document.getElementById('pwaTip').style.display = 'block';
-        });
-        document.getElementById('installBtn').addEventListener('click', () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then(() => deferredPrompt = null);
-            }
-        });
-        document.getElementById('closeTip').addEventListener('click', () => {
-            document.getElementById('pwaTip').style.display = 'none';
-        });
-        window.addEventListener('appinstalled', () => {
-            document.getElementById('pwaTip').style.display = 'none';
-        });
+        // Detectar si ya está instalada
+        function isInStandaloneMode() {
+            return (
+                window.matchMedia('(display-mode: standalone)').matches ||
+                window.navigator.standalone === true
+            );
+        }
 
-        function openModal(id) {
-            closeModal();
-            document.getElementById(id + 'Modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
-            document.body.style.overflow = '';
-        }
-        function openCustomModal(id) {
-            closeCustomModal();
-            document.getElementById('custom-' + id + 'Modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeCustomModal() {
-            document.querySelectorAll('.custom-modal').forEach(m => m.classList.remove('active'));
-            document.body.style.overflow = '';
-        }
-        function handlePassword(e) {
-            if (e.key === 'Enter') {
-                const pwd = e.target.value;
-                if (pwd === '1234') {
-                    document.getElementById('dniText').textContent = '12345678Z';
-                    document.getElementById('dniPasswordField').style.display = 'none';
-                } else {
-                    alert('Contraseña incorrecta');
+        // Mostrar instrucciones según navegador
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!isInStandaloneMode()) {
+                const container = document.getElementById('pwa-install-container');
+                const ua = navigator.userAgent;
+
+                if (container) {
+                    // iOS Safari
+                    if (/iPad|iPhone|iPod/.test(ua) || (ua.includes('Mac') && 'ontouchend' in document)) {
+                        document.getElementById('ios-instructions').style.display = 'flex';
+                        container.style.display = 'block';
+                    }
+                    // Firefox
+                    else if (/Firefox/.test(ua)) {
+                        document.getElementById('firefox-instructions').style.display = 'flex';
+                        container.style.display = 'block';
+                    }
+                    // Samsung
+                    else if (/SamsungBrowser/.test(ua)) {
+                        document.getElementById('samsung-instructions').style.display = 'flex';
+                        container.style.display = 'block';
+                    }
+                    // Opera
+                    else if (/Opera|OPR/.test(ua)) {
+                        document.getElementById('opera-instructions').style.display = 'flex';
+                        container.style.display = 'block';
+                    }
                 }
             }
-        }
-        function sendWhatsAppMessage(e) {
-            e.preventDefault();
-            const name = document.getElementById('nameInput').value;
-            const msg = document.getElementById('messageInput').value;
-            const url = `https://wa.me/34677163664?text=${encodeURIComponent(`Hola, soy ${name}. ${msg}`)}`;
-            window.open(url, '_blank');
-            closeCustomModal();
-        }
+        });
 
-        // Funciones para las nuevas modalidades
-        function viewDocument(docType) {
-            // Lógica para mostrar documentos
-            alert(`Viendo documento: ${docType}`);
-        }
-
-        function downloadLicense() {
-            // Lógica para descargar licencia
-            alert('Descargando licencia...');
-        }
-
-        function verifyOnline() {
-            // Abrir verificación online
-            window.open('https://verificacion.licenciasdecaza.es', '_blank');
-        }
-
-        function callNumber(number) {
-            // Llamar al número especificado
-            window.open(`tel:${number}`, '_self');
-        }
-
-        function downloadDocument(docType) {
-            // Descargar documento
-            alert(`Descargando: ${docType}`);
-        }
-
-        function showInsuranceCard() {
-            // Mostrar tarjeta de asistencia
-            alert('Mostrando tarjeta de asistencia del seguro...');
-        }
-        
-        function showPasswordInput(element) {
-            const passwordField = document.getElementById('dniPasswordField');
-            if (passwordField.style.display === 'none') {
-                passwordField.style.display = 'block';
-                passwordField.focus();
-            } else {
-                passwordField.style.display = 'none';
-            }
-        }
-
-        // Función para mostrar la foto de la licencia física
-        function viewLicensePhoto(type) {
-            let imageUrl;
-            
-            // Diferentes imágenes según el tipo seleccionado
-            switch(type) {
-                case 'frente':
-                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
-                    break;
-                case 'dorso':
-                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
-                    break;
-                case 'fisica':
-                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
-                    break;
-                default:
-                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
-            }
-            
-            // Establecer la imagen y mostrar el modal
-            document.getElementById('licensePhotoImg').src = imageUrl;
-            document.getElementById('licensePhotoModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Función para cerrar el modal de la foto de la licencia
-        function closeLicensePhoto() {
-            document.getElementById('licensePhotoModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
+        // Ocultar banner tras instalación
+        window.addEventListener('appinstalled', () => {
+            const container = document.getElementById('pwa-install-container');
+            if (container) container.style.display = 'none';
+        });
     </script>
+
+
+
+
+
+<script>
+  function handlePassword(e) {
+    if (e.key === 'Enter') {
+      const pwd = e.target.value;
+
+      fetch('/api/checkPassword', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pwd })
+      })
+      .then(res => {
+        if (!res.ok) throw new Error('Contraseña incorrecta');
+        return res.json();
+      })
+      .then(data => {
+        document.getElementById('dniText').textContent = data.dni;
+        document.getElementById('dniPasswordField').style.display = 'none';
+      })
+      .catch(err => alert(err.message));
+    }
+  }
+</script>
+
+
+
+
+<script>
+    function openModal(modalType) {
+        closeModal();
+        document.getElementById(modalType + 'Modal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = '';
+    }
+
+    function openCustomModal(id) {
+        closeCustomModal();
+        document.getElementById('custom-' + id + 'Modal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCustomModal() {
+        document.querySelectorAll('.custom-modal').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = '';
+    }
+
+   
+
+    
+
+    
+</script>
+
+
+    
+    
+    
+
+
+
+<script>
+  function sendWhatsAppMessage(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const fullMessage = `Hola, soy ${name}. ${message}`;
+    const phoneNumber = "521XXXXXXXXXX"; // reemplaza con tu número, formato internacional sin '+'
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(whatsappURL, '_blank');
+
+    closeCustomModal(); // Cierra el modal después de abrir WhatsApp
+    return false;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  
+    
 </body>
 </html>
