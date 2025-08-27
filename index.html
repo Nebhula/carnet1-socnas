@@ -1346,7 +1346,98 @@
         }
     }
 </style>
-    
+    <style>
+    /* CATEGORÍAS DE ESPECIES */
+    .species-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .species-category {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 15px;
+        border-radius: 10px;
+        border: 2px solid #de4753;
+    }
+
+    .species-category h4 {
+        color: #de4753;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    /* LISTA DE COBERTURA */
+    .coverage-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .coverage-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        padding: 8px 12px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #28a745;
+    }
+
+    .coverage-list i {
+        margin-right: 12px;
+        font-size: 1.1rem;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    /* RESPONSIVE PARA ESPECIES */
+    @media (max-width: 768px) {
+        .species-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .species-category {
+            padding: 12px;
+        }
+        
+        .species-category h4 {
+            font-size: 0.9rem;
+        }
+        
+        .coverage-list li {
+            font-size: 0.9rem;
+            padding: 6px 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .species-grid {
+            gap: 12px;
+        }
+        
+        .species-category {
+            padding: 10px;
+        }
+        
+        .coverage-list li {
+            font-size: 0.85rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+        
+        .coverage-list i {
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
+    }
+</style>
     
 </head>
 <body>
