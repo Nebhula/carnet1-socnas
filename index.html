@@ -813,35 +813,70 @@
 
 
 <style>
-    /* Modal para licencia de caza */
-    .modal-body-scrollable {
-        max-height: 60vh;
-        overflow-y: auto;
-        padding: 10px 0;
+    /* Estilos para la modal principal - SIN SCROLL */
+    .modal-content {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        max-width: 500px;
+        margin: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background: #de4753;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .modal-title {
+        color: #de4753;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .modal-title i {
+        font-size: 1.8rem;
     }
 
     .status-badge {
-        padding: 4px 8px;
-        border-radius: 12px;
-        font-size: 0.7rem;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
         font-weight: 600;
-        margin-left: 10px;
-    }
-
-    .status-badge.active {
         background-color: #d4edda;
         color: #155724;
     }
 
-    .status-badge.expired {
-        background-color: #f8d7da;
-        color: #721c24;
+    .modal-body-scrollable {
+        overflow: hidden;
+        padding: 10px 5px;
     }
 
+    /* Secciones de información */
     .info-section {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         padding-bottom: 15px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 2px solid #f0f0f0;
     }
 
     .info-section:last-child {
@@ -849,53 +884,41 @@
     }
 
     .info-section h3 {
-        font-size: 1rem;
         color: #de4753;
-        margin-bottom: 10px;
+        font-size: 1.2rem;
         font-weight: 600;
+        margin-bottom: 15px;
+        text-align: center;
     }
 
     .detail-row {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 8px;
-        padding: 5px 0;
+        align-items: center;
+        margin-bottom: 12px;
+        padding: 8px 0;
     }
 
     .detail-label {
-        font-weight: 500;
-        color: #777;
-        font-size: 0.9rem;
+        font-weight: 600;
+        color: #666;
+        font-size: 0.95rem;
     }
 
     .detail-value {
-        font-weight: 600;
+        font-weight: 700;
         color: #333;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        text-align: right;
     }
 
-    .chip-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-    }
-
-    .chip {
-        background-color: #ffd4d7;
-        color: #de4753;
-        padding: 6px 12px;
-        border-radius: 16px;
-        font-size: 0.8rem;
-        border: 1px solid #de4753;
-        font-weight: 500;
-    }
-
+    /* Botones de documentación */
     .document-thumbs {
         display: flex;
         gap: 15px;
         justify-content: center;
-        margin-top: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
     }
 
     .doc-thumb {
@@ -903,124 +926,70 @@
         flex-direction: column;
         align-items: center;
         cursor: pointer;
-        padding: 15px;
-        border-radius: 10px;
+        padding: 20px;
+        border-radius: 12px;
         transition: all 0.3s ease;
-        border: 2px solid transparent;
-        background: #f8f9fa;
-        min-width: 80px;
+        border: 3px solid #de4753;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        min-width: 110px;
+        text-decoration: none;
     }
 
     .doc-thumb:hover {
-        background-color: #ffd4d7;
-        border-color: #de4753;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(222, 71, 83, 0.2);
+        background: linear-gradient(135deg, #ffd4d7 0%, #ffebee 100%);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(222, 71, 83, 0.25);
     }
 
     .doc-thumb i {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #de4753;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
 
     .doc-thumb span {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: #333;
-        text-align: center;
-    }
-
-    .license-qr {
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 20px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        border-radius: 15px;
-        border: 2px solid #de4753;
-    }
-
-    .license-qr img {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 15px;
-        border: 3px solid #de4753;
-        border-radius: 10px;
-        padding: 5px;
-        background: white;
-    }
-
-    .license-qr p {
         font-size: 0.9rem;
-        color: #6c757d;
-        margin: 0;
-        font-weight: 500;
-    }
-
-    .coverage-list {
-        list-style: none;
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .coverage-list li {
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        font-size: 0.9rem;
-        padding: 5px 0;
-    }
-
-    .coverage-list i {
-        margin-right: 12px;
-        font-size: 1.2rem;
-        width: 20px;
+        font-weight: 700;
+        color: #de4753;
         text-align: center;
-    }
-
-    .modal-actions {
-        display: flex;
-        gap: 12px;
-        margin-top: 20px;
-        padding-top: 15px;
-        border-top: 1px solid #eee;
-    }
-
-    .modal-btn {
-        flex: 1;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        background-color: #de4753;
-        color: white;
-        font-weight: 600;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-        font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
 
+    /* Botones de acción */
+    .modal-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 2px solid #f0f0f0;
+    }
+
+    .modal-btn {
+        flex: 1;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #de4753 0%, #c13540 100%);
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
     .modal-btn:hover {
-        background-color: #c13540;
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(222, 71, 83, 0.3);
+        box-shadow: 0 8px 20px rgba(222, 71, 83, 0.4);
     }
 
-    .modal-btn.secondary {
-        background-color: #6c757d;
-    }
-
-    .modal-btn.secondary:hover {
-        background-color: #5a6268;
-        box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
-    }
-
-    /* Modal para licencia física con ZOOM */
+    /* Modal para la licencia física con ZOOM TÁCTIL */
     .license-photo-modal {
         display: none;
         position: fixed;
@@ -1032,61 +1001,40 @@
         z-index: 100000;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 0;
+        touch-action: none;
+        -webkit-overflow-scrolling: touch;
     }
 
     .license-photo-modal.active {
         display: flex;
+        animation: fadeIn 0.3s ease-out;
     }
 
     .license-photo-container {
         position: relative;
-        max-width: 95%;
-        max-height: 95%;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        overflow: hidden;
     }
 
     .license-photo-container img {
         max-width: 100%;
-        max-height: 70vh;
-        border-radius: 12px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease;
+        max-height: 100%;
         object-fit: contain;
-        background: white;
-        padding: 5px;
+        transition: transform 0.3s ease;
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
-    .license-photo-close {
-        position: absolute;
-        top: -60px;
-        right: 10px;
-        color: white;
-        font-size: 40px;
-        cursor: pointer;
-        background: rgba(222, 71, 83, 0.9);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100001;
-        border: 2px solid white;
-        transition: all 0.3s ease;
-    }
-
-    .license-photo-close:hover {
-        background: #c13540;
-        transform: scale(1.1);
-    }
-
+    /* Controles de zoom táctil */
     .zoom-controls {
-        position: absolute;
-        bottom: -70px;
+        position: fixed;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -1094,6 +1042,7 @@
         background: rgba(0, 0, 0, 0.8);
         padding: 15px;
         border-radius: 30px;
+        z-index: 100001;
         backdrop-filter: blur(10px);
     }
 
@@ -1118,91 +1067,165 @@
         transform: scale(1.1);
     }
 
-    /* Efectos de zoom */
+    .license-photo-close {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+        background: #de4753;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        z-index: 100001;
+        transition: all 0.3s ease;
+    }
+
+    .license-photo-close:hover {
+        background: #c13540;
+        transform: scale(1.1);
+    }
+
+    /* Estados de zoom */
+    .zoomable {
+        cursor: zoom-in;
+    }
+
     .zoomed {
+        cursor: grab;
         transform: scale(1.5);
-        cursor: zoom-out;
+    }
+
+    .zoomed:active {
+        cursor: grabbing;
     }
 
     .double-zoomed {
+        cursor: grab;
         transform: scale(2.5);
-        cursor: zoom-out;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Ocultar scrollbars en móviles */
+    .modal-body-scrollable::-webkit-scrollbar {
+        display: none;
+    }
+
+    .modal-body-scrollable {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
+        .modal-content {
+            margin: 10px;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
         .document-thumbs {
             flex-direction: column;
+            align-items: center;
             gap: 10px;
         }
-        
+
         .doc-thumb {
-            flex-direction: row;
-            justify-content: flex-start;
-            padding: 12px;
+            width: 100%;
+            max-width: 250px;
+            padding: 15px;
         }
-        
+
         .doc-thumb i {
-            margin-right: 12px;
-            margin-bottom: 0;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
-        
+
         .modal-actions {
             flex-direction: column;
         }
-        
+
         .zoom-controls {
-            bottom: -90px;
-            flex-wrap: wrap;
-            justify-content: center;
+            bottom: 15px;
+            padding: 12px;
         }
-        
+
         .zoom-btn {
             width: 45px;
             height: 45px;
             font-size: 18px;
         }
-        
+
         .license-photo-close {
-            top: -70px;
-            right: 5px;
+            top: 15px;
+            right: 15px;
             width: 45px;
             height: 45px;
             font-size: 30px;
         }
     }
 
-    /* Animaciones */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.9); }
-        to { opacity: 1; transform: scale(1); }
+    @media (max-width: 480px) {
+        .modal-title {
+            font-size: 1.3rem;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .detail-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .detail-value {
+            text-align: left;
+        }
+
+        .doc-thumb {
+            flex-direction: row;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .doc-thumb i {
+            margin-right: 15px;
+            margin-bottom: 0;
+        }
+
+        .zoom-controls {
+            flex-wrap: wrap;
+            justify-content: center;
+            bottom: 10px;
+        }
     }
 
-    .license-photo-modal.active .license-photo-container {
-        animation: fadeIn 0.3s ease-out;
-    }
-
-    /* Scroll personalizado */
-    .modal-body-scrollable::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    .modal-body-scrollable::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-
-    .modal-body-scrollable::-webkit-scrollbar-thumb {
-        background: #de4753;
-        border-radius: 10px;
-    }
-
-    .modal-body-scrollable::-webkit-scrollbar-thumb:hover {
-        background: #c13540;
+    /* Prevenir zoom no deseado en iOS */
+    @supports (-webkit-touch-callout: none) {
+        .license-photo-container {
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .license-photo-container img {
+            -webkit-transform: translateZ(0);
+        }
     }
 </style>
-
     
     
 </head>
@@ -1535,22 +1558,132 @@
 
 
 <script>
-    // Función para mostrar la foto de la licencia física
+    let currentScale = 1;
+    let isDragging = false;
+    let startX, startY, scrollLeft, scrollTop;
+    let lastTouchDistance = null;
+
     function viewLicensePhoto(imageUrl) {
-        document.getElementById('licensePhotoImg').src = imageUrl;
+        const img = document.getElementById('licensePhotoImg');
+        img.src = imageUrl;
         document.getElementById('licensePhotoModal').classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Resetear zoom y posición
+        resetZoom();
+        
+        // Preparar para zoom táctil
+        img.classList.add('zoomable');
+        img.classList.remove('zoomed', 'double-zoomed');
     }
 
-    // Función para cerrar el modal de la foto
     function closeLicensePhoto() {
         document.getElementById('licensePhotoModal').classList.remove('active');
         document.body.style.overflow = '';
+        resetZoom();
     }
 
-    // Cerrar modal con ESC
+    function zoomIn() {
+        const img = document.getElementById('licensePhotoImg');
+        if (currentScale < 3) {
+            currentScale += 0.5;
+            applyZoom(img);
+        }
+    }
+
+    function zoomOut() {
+        const img = document.getElementById('licensePhotoImg');
+        if (currentScale > 1) {
+            currentScale -= 0.5;
+            applyZoom(img);
+        }
+    }
+
+    function resetZoom() {
+        currentScale = 1;
+        const img = document.getElementById('licensePhotoImg');
+        img.style.transform = 'scale(1) translate(0, 0)';
+        img.classList.add('zoomable');
+        img.classList.remove('zoomed', 'double-zoomed');
+    }
+
+    function applyZoom(img) {
+        img.style.transform = `scale(${currentScale})`;
+        
+        if (currentScale > 1) {
+            img.classList.remove('zoomable');
+            img.classList.add('zoomed');
+        } else {
+            img.classList.add('zoomable');
+            img.classList.remove('zoomed', 'double-zoomed');
+        }
+    }
+
+    // Zoom táctil para móviles
+    document.getElementById('licensePhotoImg').addEventListener('touchstart', function(e) {
+        if (e.touches.length === 2) {
+            // Zoom con dos dedos
+            e.preventDefault();
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            lastTouchDistance = Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+            );
+        } else if (currentScale > 1) {
+            // Arrastre cuando está zoomedo
+            isDragging = true;
+            startX = e.touches[0].pageX - this.offsetLeft;
+            startY = e.touches[0].pageY - this.offsetTop;
+            scrollLeft = this.scrollLeft;
+            scrollTop = this.scrollTop;
+        }
+    });
+
+    document.getElementById('licensePhotoImg').addEventListener('touchmove', function(e) {
+        if (e.touches.length === 2 && lastTouchDistance !== null) {
+            // Zoom con pinch
+            e.preventDefault();
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const currentDistance = Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+            );
+            
+            if (lastTouchDistance) {
+                const scaleFactor = currentDistance / lastTouchDistance;
+                currentScale = Math.max(1, Math.min(3, currentScale * scaleFactor));
+                applyZoom(this);
+                lastTouchDistance = currentDistance;
+            }
+        } else if (isDragging) {
+            // Arrastre
+            e.preventDefault();
+            const x = e.touches[0].pageX - this.offsetLeft;
+            const y = e.touches[0].pageY - this.offsetTop;
+            const walkX = (x - startX) * 2;
+            const walkY = (y - startY) * 2;
+            
+            this.style.transform = `scale(${currentScale}) translate(${walkX}px, ${walkY}px)`;
+        }
+    });
+
+    document.getElementById('licensePhotoImg').addEventListener('touchend', function() {
+        isDragging = false;
+        lastTouchDistance = null;
+    });
+
+    // Cerrar con ESC
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
+            closeLicensePhoto();
+        }
+    });
+
+    // Cerrar al hacer click fuera de la imagen
+    document.getElementById('licensePhotoModal').addEventListener('click', function(e) {
+        if (e.target === this) {
             closeLicensePhoto();
         }
     });
