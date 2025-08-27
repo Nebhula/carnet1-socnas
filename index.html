@@ -779,6 +779,287 @@
         }
     </style>
 
+
+
+<style>
+    /* Modal para licencia de caza */
+    .modal-body-scrollable {
+        max-height: 60vh;
+        overflow-y: auto;
+        padding: 10px 0;
+    }
+
+    .status-badge {
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    .status-badge.active {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .status-badge.expired {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .info-section {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .info-section:last-child {
+        border-bottom: none;
+    }
+
+    .info-section h3 {
+        font-size: 1rem;
+        color: #de4753;
+        margin-bottom: 10px;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .detail-label {
+        font-weight: 500;
+        color: #777;
+    }
+
+    .detail-value {
+        font-weight: 600;
+    }
+
+    .chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .chip {
+        background-color: #ffd4d7;
+        color: #de4753;
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 0.8rem;
+        border: 1px solid #de4753;
+    }
+
+    .document-thumbs {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .doc-thumb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .doc-thumb:hover {
+        background-color: #f8f9fa;
+        border-color: #de4753;
+        transform: translateY(-2px);
+    }
+
+    .doc-thumb i {
+        font-size: 2rem;
+        color: #de4753;
+        margin-bottom: 5px;
+    }
+
+    .doc-thumb span {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .license-qr {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 12px;
+    }
+
+    .license-qr img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+        border: 2px solid #de4753;
+        border-radius: 8px;
+    }
+
+    .license-qr p {
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin: 0;
+    }
+
+    .coverage-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .coverage-list li {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .coverage-list i {
+        margin-right: 8px;
+        font-size: 1.1rem;
+    }
+
+    .modal-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .modal-btn {
+        flex: 1;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background-color: #de4753;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .modal-btn:hover {
+        background-color: #c13540;
+        transform: translateY(-1px);
+    }
+
+    .modal-btn.secondary {
+        background-color: #6c757d;
+    }
+
+    .modal-btn.secondary:hover {
+        background-color: #5a6268;
+    }
+
+    /* Modal para licencia física con ZOOM */
+    .license-photo-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.98);
+        z-index: 100000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .license-photo-modal.active {
+        display: flex;
+    }
+
+    .license-photo-container {
+        position: relative;
+        max-width: 95%;
+        max-height: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .license-photo-container img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        object-fit: contain;
+    }
+
+    .license-photo-close {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.7);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100001;
+    }
+
+    .zoom-controls {
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .zoom-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background: #de4753;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .zoom-btn:hover {
+        background: #c13540;
+        transform: scale(1.1);
+    }
+
+    /* Efectos de zoom */
+    .zoomed {
+        transform: scale(1.5);
+        cursor: zoom-out;
+    }
+
+    .double-zoomed {
+        transform: scale(2.5);
+        cursor: zoom-out;
+    }
+</style>
+
+
+    
     <!-- Estilos del banner PWA -->
     <style>
         #pwa-install-container {
