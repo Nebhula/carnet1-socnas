@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -88,7 +87,7 @@
         }
         .card-header {
             background: 
-                linear-gradient(0deg, #4e722866, #4e7228E6),
+                linear-gradient(333deg, #00000066, #000000E6),
                 url('https://media.istockphoto.com/id/1301911854/es/foto/cazador-y-su-perro-con-presa-al-atardecer.jpg?s=612x612&w=0&k=20&c=W9vsoK0D1S5gPHI9-lbeHC8ckytnIhDxr7xO7Fxl27Q=') center/cover no-repeat;
             color: white;
             text-align: center;
@@ -327,6 +326,10 @@
             padding: 20px;
             animation: slideUp 0.4s ease-out;
             margin: 0 auto;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         @keyframes slideUp {
             from { transform: translateY(100%); opacity: 0; }
@@ -345,6 +348,7 @@
             border-radius: 50%;
             cursor: pointer;
             border: none;
+            z-index: 10;
         }
         .modal-title, .custom-modal-title {
             color: var(--primary-color);
@@ -352,6 +356,10 @@
             font-weight: bold;
             margin-bottom: 15px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
         .modal-text {
             color: var(--text-color);
@@ -374,6 +382,305 @@
             cursor: pointer;
             border: none;
             text-align: center;
+        }
+
+        /* Estilos para modales mejoradas */
+        .modal-body-scrollable {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding: 10px 0;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .status-badge.active {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.expired {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-section:last-child {
+            border-bottom: none;
+        }
+
+        .info-section h3 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .detail-label {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .detail-value {
+            font-weight: 600;
+        }
+
+        .chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+        }
+
+        .document-thumbs {
+            display: flex;
+            gap: 15px;
+        }
+
+        .doc-thumb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .doc-thumb i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .doc-thumb span {
+            font-size: 0.8rem;
+        }
+
+        .coverage-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .coverage-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .coverage-list i {
+            color: #28a745;
+            margin-right: 8px;
+        }
+
+        .emergency-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .emergency-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .emergency-item i:first-child {
+            font-size: 1.2rem;
+            color: #dc3545;
+            margin-right: 10px;
+        }
+
+        .emergency-item div {
+            flex: 1;
+        }
+
+        .emergency-item strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .emergency-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .call-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .doc-download-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .modal-btn.secondary {
+            background-color: #6c757d;
+        }
+
+        .license-qr {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .license-qr img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        .license-qr p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .weapon-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .weapon-item {
+            display: flex;
+            gap: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .weapon-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .weapon-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .weapon-details {
+            flex: 1;
+        }
+
+        .weapon-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .weapon-details p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Modal para mostrar la foto de la licencia física */
+        .license-photo-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 100000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .license-photo-modal.active {
+            display: flex;
+        }
+
+        .license-photo-container {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .license-photo-container img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .license-photo-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Responsive */
@@ -518,56 +825,428 @@
         </div>
     </div>
 
-    <!-- MODALES -->
+    <!-- MODALES MEJORADAS -->
     <div class="modal" id="licenciaModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">Licencia de Caza</div>
-            <div class="modal-text">Número: EX-2024-8876</div>
-            <button class="modal-action" onclick="closeModal()">Aceptar</button>
+            <div class="modal-title">
+                <i class="fas fa-id-card"></i> Licencia de Caza 2024
+                <span class="status-badge active">Vigente</span>
+            </div>
+            
+            <div class="modal-body-scrollable">
+                <div class="license-qr">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo_RSc485hqL6upKQe_S00sTHIRaFFAkRCkO1hkExeWVZEdC7CekTX4bczfPjviz9qROzorBcJmP8o0UzWer7cnjVSzq_kn5VvY_GjaWhcBO4eD2GGwR0d40pgI95T5hfvDq72o0nzkx8GUizNUNCaZSfW1Zwt2FH_ytc-j79j8VT4SswkAJTU3_amR1k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2883%29.png" alt="QR Verificación Licencia">
+                    <p>Escanea para verificar oficialmente</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Datos de la Licencia</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">Número:</span>
+                        <span class="detail-value">EX-2024-8876</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Titular:</span>
+                        <span class="detail-value">Carlos Ruiz Montes</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Validez:</span>
+                        <span class="detail-value">01/01/2024 - 31/12/2024</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Territorio:</span>
+                        <span class="detail-value">Extremadura</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Modalidades:</span>
+                        <span class="detail-value">Caza Mayor, Caza Menor</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Especies Autorizadas</h3>
+                    <div class="chip-list">
+                        <span class="chip">Jabalí</span>
+                        <span class="chip">Conejo</span>
+                        <span class="chip">Perdiz</span>
+                        <span class="chip">Liebre</span>
+                        <span class="chip">Venado</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Documentación Adjunta</h3>
+                    <div class="document-thumbs">
+                        <div class="doc-thumb" onclick="viewLicensePhoto('frente')">
+                            <i class="fas fa-file-image"></i>
+                            <span>Anverso</span>
+                        </div>
+                        <div class="doc-thumb" onclick="viewLicensePhoto('dorso')">
+                            <i class="fas fa-file-image"></i>
+                            <span>Reverso</span>
+                        </div>
+                        <div class="doc-thumb" onclick="viewLicensePhoto('fisica')">
+                            <i class="fas fa-camera"></i>
+                            <span>Licencia Física</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="downloadLicense()">
+                    <i class="fas fa-download"></i> Descargar
+                </button>
+                <button class="modal-btn" onclick="verifyOnline()">
+                    <i class="fas fa-external-link-alt"></i> Verificar Online
+                </button>
+            </div>
         </div>
     </div>
+
+    <!-- Modal para mostrar la foto de la licencia física -->
+    <div id="licensePhotoModal" class="license-photo-modal">
+        <div class="license-photo-container">
+            <span class="license-photo-close" onclick="closeLicensePhoto()">×</span>
+            <img id="licensePhotoImg" src="" alt="Licencia Física">
+        </div>
+    </div>
+
     <div class="modal" id="federacionModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">Federación</div>
-            <div class="modal-text">FEXCASA - Federación Extremeña de Caza</div>
-            <button class="modal-action" onclick="closeModal()">Aceptar</button>
+            <div class="modal-title">
+                <i class="fas fa-users"></i> Federación Extremeña de Caza
+                <span class="status-badge active">Activo</span>
+            </div>
+            
+            <div class="modal-body-scrollable">
+                <div class="info-section">
+                    <h3>Datos de Afiliación</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">Número Socio:</span>
+                        <span class="detail-value">FEX-8876</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Fecha Alta:</span>
+                        <span class="detail-value">15/02/2018</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Tipo:</span>
+                        <span class="detail-value">Cazador Senior</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Sección:</span>
+                        <span class="detail-value">Caza Mayor</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Beneficios Activos</h3>
+                    <ul class="coverage-list">
+                        <li><i class="fas fa-check-circle"></i> Acceso a cotos federados</li>
+                        <li><i class="fas fa-check-circle"></i> Formación continua</li>
+                        <li><i class="fas fa-check-circle"></i> Descuentos en compras</li>
+                        <li><i class="fas fa-check-circle"></i> Participación en eventos</li>
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Próximos Eventos</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">25 Oct:</span>
+                        <span class="detail-value">Jornada de caza menor</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">12 Nov:</span>
+                        <span class="detail-value">Curso de seguridad</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">30 Nov:</span>
+                        <span class="detail-value">Torneo de caza mayor</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Contacto Federación</h3>
+                    <div class="emergency-contacts">
+                        <div class="emergency-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Atención al Socio</strong>
+                                <p>924 123 456</p>
+                            </div>
+                            <button class="call-btn" onclick="callNumber('924123456')">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                        </div>
+                        <div class="emergency-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>socios@fexcasa.es</p>
+                            </div>
+                            <button class="call-btn" onclick="location.href='mailto:socios@fexcasa.es'">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn" onclick="window.open('https://fexcasa.es', '_blank')">
+                    <i class="fas fa-globe"></i> Web Federación
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="modal" id="seguroModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">Seguro de Caza</div>
-            <div class="modal-text">Cubierto por MAPFRE hasta 31/12/2025</div>
-            <button class="modal-action" onclick="closeModal()">Aceptar</button>
+            <div class="modal-title">
+                <i class="fas fa-shield-alt"></i> Seguro de Caza
+                <span class="status-badge active">Vigente</span>
+            </div>
+            
+            <div class="modal-body-scrollable">
+                <div class="info-section">
+                    <div class="detail-row">
+                        <span class="detail-label">Aseguradora:</span>
+                        <span class="detail-value">MAPFRE</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Póliza:</span>
+                        <span class="detail-value">CAZA-2024-8876</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Cobertura:</span>
+                        <span class="detail-value">Responsabilidad Civil + Accidentes</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Validez:</span>
+                        <span class="detail-value">01/01/2024 - 31/12/2024</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Capital Asegurado:</span>
+                        <span class="detail-value">300.000€</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Coberturas Principales</h3>
+                    <ul class="coverage-list">
+                        <li><i class="fas fa-check-circle"></i> Daños a terceros: 300.000€</li>
+                        <li><i class="fas fa-check-circle"></i> Accidentes: 30.000€</li>
+                        <li><i class="fas fa-check-circle"></i> Asistencia sanitaria: 3.000€</li>
+                        <li><i class="fas fa-check-circle"></i> Defensa jurídica: Incluida</li>
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Teléfonos de Emergencia</h3>
+                    <div class="emergency-contacts">
+                        <div class="emergency-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Urgencias 24h</strong>
+                                <p>915 678 123</p>
+                            </div>
+                            <button class="call-btn" onclick="callNumber('915678123')">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                        </div>
+                        <div class="emergency-item">
+                            <i class="fas fa-first-aid"></i>
+                            <div>
+                                <strong>Asistencia Médica</strong>
+                                <p>900 456 789</p>
+                            </div>
+                            <button class="call-btn" onclick="callNumber('900456789')">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Documentación</h3>
+                    <button class="doc-download-btn" onclick="downloadDocument('poliza_seguro')">
+                        <i class="fas fa-file-pdf"></i> Descargar Póliza Completa
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn" onclick="showInsuranceCard()">
+                    <i class="fas fa-id-card"></i> Tarjeta de Asistencia
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="modal" id="armasModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">Armas Registradas</div>
-            <div class="modal-text">
-                - Escopeta 12 cal: XXXX-YYYY<br>
-                - Rifle 223: AAAA-BBBB
+            <div class="modal-title">
+                <i class="fas fa-gun"></i> Armas Registradas
+                <span class="status-badge active">2 Registradas</span>
             </div>
-            <button class="modal-action" onclick="closeModal()">Aceptar</button>
+            
+            <div class="modal-body-scrollable">
+                <div class="weapon-gallery">
+                    <div class="weapon-item">
+                        <div class="weapon-image">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" alt="Escopeta Beretta">
+                        </div>
+                        <div class="weapon-details">
+                            <h4>Escopeta Beretta Silver Pigeon</h4>
+                            <p>Calibre: 12/70 · Serie: BT123456</p>
+                            <p>Licencia: X-1234-2023 · Vence: 31/12/2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="weapon-item">
+                        <div class="weapon-image">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaeH8ENSH0wEpflM67O6_b22xd_AAFIFx2rR_KQKoNqkjlBHjPTHyTNFGpxUsUsAG6548gJFWFu3Kokqx2VvthptY5nvzxYlNBtuB1kvV6YkUpMmsUdKhazxsJckCuoS8lqHDBmstdQynFF8hHe9tm76NWiw87BhKW7lbeosRi6zYsuB4P7hsWJ5Am0drE/s1600/243192803_2808764332747610_1779530802672580935_n%20%282%29.jpg" alt="Rifle Tikka">
+                        </div>
+                        <div class="weapon-details">
+                            <h4>Rifle Tikka T3x Lite</h4>
+                            <p>Calibre: .223 Rem · Serie: TK654321</p>
+                            <p>Licencia: X-5678-2023 · Vence: 31/12/2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Documentos de Armas</h3>
+                    <button class="doc-download-btn" onclick="downloadDocument('licencia_armas')">
+                        <i class="fas fa-file-pdf"></i> Licencia de Armas
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+                <button class="modal-btn" onclick="window.open('tel:062')">
+                    <i class="fas fa-phone"></i> Contactar Guardia Civil
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="modal" id="vencimientoModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">Vencimiento</div>
-            <div class="modal-text">Tu licencia vence el 31 de diciembre de 2025.</div>
-            <button class="modal-action" onclick="closeModal()">Renovar</button>
+            <div class="modal-title">
+                <i class="fas fa-calendar-alt"></i> Vencimientos
+                <span class="status-badge active">Al Día</span>
+            </div>
+            
+            <div class="modal-body-scrollable">
+                <div class="info-section">
+                    <h3>Próximos Vencimientos</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">Licencia Caza:</span>
+                        <span class="detail-value">31/12/2024</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Seguro:</span>
+                        <span class="detail-value">31/12/2024</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Licencia Armas:</span>
+                        <span class="detail-value">31/12/2025</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Federación:</span>
+                        <span class="detail-value">31/12/2024</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Recordatorios</h3>
+                    <div class="detail-row">
+                        <input type="checkbox" id="reminder1" checked>
+                        <label for="reminder1">Recordar 30 días antes</label>
+                    </div>
+                    <div class="detail-row">
+                        <input type="checkbox" id="reminder2" checked>
+                        <label for="reminder2">Recordar 7 días antes</label>
+                    </div>
+                    <div class="detail-row">
+                        <input type="checkbox" id="reminder3">
+                        <label for="reminder3">Recordar día de vencimiento</label>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Renovación de Licencia</h3>
+                    <p>Documentación necesaria para renovación:</p>
+                    <ul class="coverage-list">
+                        <li><i class="fas fa-check-circle"></i> DNI/NIE en vigor</li>
+                        <li><i class="fas fa-check-circle"></i> Certificado médico</li>
+                        <li><i class="fas fa-check-circle"></i> Tasas abonadas</li>
+                        <li><i class="fas fa-check-circle"></i> Foto actualizada</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="closeModal()">
+                    <i class="fas fa-bell"></i> Configurar Recordatorios
+                </button>
+                <button class="modal-btn" onclick="window.open('https://renovacionlicencias.es', '_blank')">
+                    <i class="fas fa-external-link-alt"></i> Renovar Online
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="modal" id="infoModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="modal-title">Carnet Digital de Caza</div>
-            <div class="modal-text">Este carnet es válido como documento oficial de caza en Andalucía y Extremadura.</div>
-            <button class="modal-action" onclick="closeModal()">Entendido</button>
+            <div class="modal-title">
+                <i class="fas fa-info-circle"></i> Información del Carnet
+            </div>
+            
+            <div class="modal-body-scrollable">
+                <div class="info-section">
+                    <h3>Carnet Digital de Caza</h3>
+                    <p>Este carnet es válido como documento oficial de caza en todas las comunidades autónomas de España.</p>
+                    <p>Incluye toda la documentación necesaria para acreditar tu condición de cazador.</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Características</h3>
+                    <ul class="coverage-list">
+                        <li><i class="fas fa-check-circle"></i> Licencia de caza digital</li>
+                        <li><i class="fas fa-check-circle"></i> Seguro de responsabilidad civil</li>
+                        <li><i class="fas fa-check-circle"></i> Datos de federación</li>
+                        <li><i class="fas fa-check-circle"></i> Información de armas registradas</li>
+                        <li><i class="fas fa-check-circle"></i> Documentación acreditiativa</li>
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Uso Oficial</h3>
+                    <p>En caso de control, muestra el código QR al agente para que pueda verificar la validez de tu documentación.</p>
+                    <div class="license-qr">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo_RSc485hqL6upKQe_S00sTHIRaFFAkRCkO1hkExeWVZEdC7CekTX4bczfPjviz9qROzorBcJmP8o0UzWer7cnjVSzq_kn5VvY_GjaWhcBO4eD2GGwR0d40pgI95T5hfvDq72o0nzkx8GUizNUNCaZSfW1Zwt2FH_ytc-j79j8VT4SswkAJTU3_amR1k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2883%29.png" alt="QR Verificación">
+                        <p>Código de verificación oficial</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
         </div>
     </div>
 
@@ -589,8 +1268,8 @@
             <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
             <h2 class="custom-modal-title">CONTACTO</h2>
             <form onsubmit="sendWhatsAppMessage(event)">
-                <input type="text" id="name" placeholder="Tu nombre" required style="width: 100%; padding: 10px; margin-top: 10px;">
-                <textarea id="message" placeholder="Tu mensaje" required style="width: 100%; padding: 10px; margin-top: 10px;"></textarea>
+                <input type="text" id="nameInput" placeholder="Tu nombre" required style="width: 100%; padding: 10px; margin-top: 10px;">
+                <textarea id="messageInput" placeholder="Tu mensaje" required style="width: 100%; padding: 10px; margin-top: 10px;"></textarea>
                 <button type="submit" class="custom-modal-action">ENVIAR POR WHATSAPP</button>
             </form>
         </div>
@@ -659,11 +1338,83 @@
         }
         function sendWhatsAppMessage(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const msg = document.getElementById('message').value;
+            const name = document.getElementById('nameInput').value;
+            const msg = document.getElementById('messageInput').value;
             const url = `https://wa.me/34677163664?text=${encodeURIComponent(`Hola, soy ${name}. ${msg}`)}`;
             window.open(url, '_blank');
             closeCustomModal();
+        }
+
+        // Funciones para las nuevas modalidades
+        function viewDocument(docType) {
+            // Lógica para mostrar documentos
+            alert(`Viendo documento: ${docType}`);
+        }
+
+        function downloadLicense() {
+            // Lógica para descargar licencia
+            alert('Descargando licencia...');
+        }
+
+        function verifyOnline() {
+            // Abrir verificación online
+            window.open('https://verificacion.licenciasdecaza.es', '_blank');
+        }
+
+        function callNumber(number) {
+            // Llamar al número especificado
+            window.open(`tel:${number}`, '_self');
+        }
+
+        function downloadDocument(docType) {
+            // Descargar documento
+            alert(`Descargando: ${docType}`);
+        }
+
+        function showInsuranceCard() {
+            // Mostrar tarjeta de asistencia
+            alert('Mostrando tarjeta de asistencia del seguro...');
+        }
+        
+        function showPasswordInput(element) {
+            const passwordField = document.getElementById('dniPasswordField');
+            if (passwordField.style.display === 'none') {
+                passwordField.style.display = 'block';
+                passwordField.focus();
+            } else {
+                passwordField.style.display = 'none';
+            }
+        }
+
+        // Función para mostrar la foto de la licencia física
+        function viewLicensePhoto(type) {
+            let imageUrl;
+            
+            // Diferentes imágenes según el tipo seleccionado
+            switch(type) {
+                case 'frente':
+                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
+                    break;
+                case 'dorso':
+                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
+                    break;
+                case 'fisica':
+                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
+                    break;
+                default:
+                    imageUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg';
+            }
+            
+            // Establecer la imagen y mostrar el modal
+            document.getElementById('licensePhotoImg').src = imageUrl;
+            document.getElementById('licensePhotoModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Función para cerrar el modal de la foto de la licencia
+        function closeLicensePhoto() {
+            document.getElementById('licensePhotoModal').classList.remove('active');
+            document.body.style.overflow = '';
         }
     </script>
 </body>
