@@ -1534,9 +1534,48 @@
 </div>
 
 
+<script>
+    // Función para mostrar la foto de la licencia física
+    function viewLicensePhoto(imageUrl) {
+        document.getElementById('licensePhotoImg').src = imageUrl;
+        document.getElementById('licensePhotoModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Función para cerrar el modal de la foto
+    function closeLicensePhoto() {
+        document.getElementById('licensePhotoModal').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Cerrar modal con ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLicensePhoto();
+        }
+    });
+</script>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
 
             
