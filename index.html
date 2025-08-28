@@ -1580,7 +1580,164 @@
         
         /* ... mantén los estilos claros para desktop ... */
     }
- </style>   
+ </style>  
+
+
+<style>
+    /* GRID DE COBERTURAS */
+    .coverage-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .coverage-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 10px;
+        border-left: 4px solid #de4753;
+    }
+
+    .coverage-item i {
+        font-size: 1.8rem;
+        min-width: 40px;
+        text-align: center;
+    }
+
+    .coverage-item strong {
+        color: #de4753;
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .coverage-item p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    /* CONTACTOS DE EMERGENCIA */
+    .emergency-contacts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .emergency-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        background: linear-gradient(135deg, #fff3f3 0%, #ffe6e6 100%);
+        border-radius: 10px;
+        border: 2px solid #dc3545;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .emergency-item:hover {
+        background: linear-gradient(135deg, #ffe6e6 0%, #ffd4d4 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(220, 53, 69, 0.2);
+    }
+
+    .emergency-item i:first-child {
+        font-size: 1.5rem;
+        min-width: 30px;
+    }
+
+    .emergency-item i:last-child {
+        font-size: 1.3rem;
+        margin-left: auto;
+    }
+
+    .emergency-item strong {
+        color: #dc3545;
+        font-size: 0.95rem;
+        display: block;
+    }
+
+    .emergency-item p {
+        margin: 2px 0;
+        color: #333;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .emergency-item small {
+        color: #666;
+        font-size: 0.8rem;
+    }
+
+    /* LISTA DE EXCLUSIONES */
+    .exclusion-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .exclusion-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        padding: 10px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #dc3545;
+    }
+
+    .exclusion-list i {
+        margin-right: 10px;
+        font-size: 1.1rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .coverage-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .coverage-item {
+            padding: 12px;
+        }
+        
+        .emergency-item {
+            padding: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .emergency-item i:first-child {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .coverage-item {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        
+        .emergency-item {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        
+        .emergency-item i:last-child {
+            margin-left: 0;
+        }
+    }
+</style>
+
+    
 </head>
 <body>
 <div class="card-container">
@@ -1630,10 +1787,10 @@
                 </div>
 
 <div class="info-block">
-                    <div class="label">Nº C. NACIONAL</div>
-                    <div class="value" onclick="openModal('criador')" style="cursor: pointer; position: relative;">
-                        56G88
-                        <span class="icon-button" onclick="event.stopPropagation(); openModal('criador')">i</span>
+                    <div class="label">SEGURO CAZA</div>
+                    <div class="value" onclick="openModal('seguro')" style="cursor: pointer; position: relative;">
+                        MAFRE
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('seguro')">i</span>
                     </div>
                 </div>
                 <div class="info-block">
@@ -2113,10 +2270,211 @@
 
 
 
+<div class="modal" id="seguroModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-title">
+            <i class="fas fa-shield-alt"></i> Seguro de Caza MAPFRE
+            <span class="status-badge active">Vigente</span>
+        </div>
+        
+        <div class="modal-body-scrollable">
+            <!-- DATOS DEL SEGURO -->
+            <div class="info-section">
+                <h3>Datos de la Póliza</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Nº Póliza:</span>
+                    <span class="detail-value">MAPFRE-CAZA-2024-8876</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Aseguradora:</span>
+                    <span class="detail-value">MAPFRE SEGUROS</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Tomador:</span>
+                    <span class="detail-value">Carlos Ruiz Montes</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Validez:</span>
+                    <span class="detail-value">01/01/2024 - 31/12/2024</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Tipo:</span>
+                    <span class="detail-value">Responsabilidad Civil + Accidentes</span>
+                </div>
+            </div>
+
+            <!-- COBERTURAS PRINCIPALES -->
+            <div class="info-section">
+                <h3>Coberturas Principales</h3>
+                <div class="coverage-grid">
+                    <div class="coverage-item">
+                        <i class="fas fa-users" style="color: #dc3545;"></i>
+                        <div>
+                            <strong>Responsabilidad Civil</strong>
+                            <p>300.000€ por daños a terceros</p>
+                        </div>
+                    </div>
+                    <div class="coverage-item">
+                        <i class="fas fa-user-injured" style="color: #fd7e14;"></i>
+                        <div>
+                            <strong>Accidentes</strong>
+                            <p>30.000€ por accidente personal</p>
+                        </div>
+                    </div>
+                    <div class="coverage-item">
+                        <i class="fas fa-hospital" style="color: #20c997;"></i>
+                        <div>
+                            <strong>Asistencia Sanitaria</strong>
+                            <p>3.000€ gastos médicos</p>
+                        </div>
+                    </div>
+                    <div class="coverage-item">
+                        <i class="fas fa-gavel" style="color: #6f42c1;"></i>
+                        <div>
+                            <strong>Defensa Jurídica</strong>
+                            <p>Incluida sin límite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASISTENCIA EN CAZA -->
+            <div class="info-section">
+                <h3>Asistencia en Acto de Caza</h3>
+                <div class="coverage-list">
+                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Asistencia por accidente de caza</li>
+                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Traslado sanitario de urgencia</li>
+                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Repatriación en caso de accidente</li>
+                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Avance de gastos médicos</li>
+                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Asistencia veterinaria para perros</li>
+                </div>
+            </div>
+
+            <!-- DOCUMENTACIÓN DEL SEGURO -->
+            <div class="info-section">
+                <h3>Documentación del Seguro</h3>
+                <div class="document-thumbs">
+                    <div class="doc-thumb" onclick="viewInsurancePhoto('https://ejemplo.com/poliza-frontal.jpg')">
+                        <i class="fas fa-file-contract"></i>
+                        <span>PÓLIZA FRONTAL</span>
+                    </div>
+                    <div class="doc-thumb" onclick="viewInsurancePhoto('https://ejemplo.com/poliza-trasera.jpg')">
+                        <i class="fas fa-file-contract"></i>
+                        <span>PÓLIZA TRASERA</span>
+                    </div>
+                    <div class="doc-thumb" onclick="viewInsurancePhoto('https://ejemplo.com/condiciones.jpg')">
+                        <i class="fas fa-file-alt"></i>
+                        <span>CONDICIONES</span>
+                    </div>
+                    <div class="doc-thumb" onclick="viewInsurancePhoto('https://ejemplo.com/tarjeta-asistencia.jpg')">
+                        <i class="fas fa-credit-card"></i>
+                        <span>TARJETA ASISTENCIA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TELÉFONOS DE EMERGENCIA 24H -->
+            <div class="info-section">
+                <h3><i class="fas fa-phone-emergency" style="color: #dc3545;"></i> Teléfonos de Emergencia 24H</h3>
+                <div class="emergency-contacts">
+                    <div class="emergency-item" onclick="callEmergency('915678123')">
+                        <i class="fas fa-phone-alt" style="color: #dc3545;"></i>
+                        <div>
+                            <strong>URGENCIAS GENERALES</strong>
+                            <p>915 678 123</p>
+                            <small>Accidentes, asistencia, emergencias</small>
+                        </div>
+                        <i class="fas fa-phone-volume" style="color: #28a745;"></i>
+                    </div>
+                    
+                    <div class="emergency-item" onclick="callEmergency('900456789')">
+                        <i class="fas fa-first-aid" style="color: #fd7e14;"></i>
+                        <div>
+                            <strong>ASISTENCIA MÉDICA</strong>
+                            <p>900 456 789</p>
+                            <small>Gastos médicos, hospitalización</small>
+                        </div>
+                        <i class="fas fa-phone-volume" style="color: #28a745;"></i>
+                    </div>
+                    
+                    <div class="emergency-item" onclick="callEmergency('911234567')">
+                        <i class="fas fa-balance-scale" style="color: #6f42c1;"></i>
+                        <div>
+                            <strong>DEFENSA JURÍDICA</strong>
+                            <p>911 234 567</p>
+                            <small>Problemas legales, denuncias</small>
+                        </div>
+                        <i class="fas fa-phone-volume" style="color: #28a745;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COBERTURAS ADICIONALES -->
+            <div class="info-section">
+                <h3>Coberturas Adicionales</h3>
+                <div class="chip-list">
+                    <span class="chip">Daños a cultivos</span>
+                    <span class="chip">Pérdida de licencia</span>
+                    <span class="chip">Robo de armas</span>
+                    <span class="chip">Accidentes perros</span>
+                    <span class="chip">Búsqueda y rescate</span>
+                </div>
+            </div>
+
+            <!-- EXCLUSIONES IMPORTANTES -->
+            <div class="info-section">
+                <h3>Exclusiones Importantes</h3>
+                <div class="exclusion-list">
+                    <li><i class="fas fa-times-circle" style="color: #dc3545;"></i> Caza furtiva o ilegal</li>
+                    <li><i class="fas fa-times-circle" style="color: #dc3545;"></i> Embriaguez o drogas</li>
+                    <li><i class="fas fa-times-circle" style="color: #dc3545;"></i> Negligencia grave</li>
+                    <li><i class="fas fa-times-circle" style="color: #dc3545;"></i> Daños intencionados</li>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-actions">
+            <button class="modal-btn secondary" onclick="downloadInsurance()">
+                <i class="fas fa-download"></i> Descargar Póliza
+            </button>
+            <button class="modal-btn" onclick="callEmergency('915678123')">
+                <i class="fas fa-phone"></i> Llamar Urgencias
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para fotos del seguro (usa el mismo que para licencia) -->
+<div id="licensePhotoModal" class="license-photo-modal">
+    <div class="license-photo-container">
+        <span class="license-photo-close" onclick="closeLicensePhoto()">×</span>
+        <img id="licensePhotoImg" src="" alt="Documento Seguro">
+    </div>
+</div>
 
 
+<script>
+    // Función para llamadas de emergencia
+    function callEmergency(number) {
+        if (confirm(`¿Llamar al ${number}?`)) {
+            window.open(`tel:${number}`, '_self');
+        }
+    }
 
+    // Función para ver fotos del seguro (usa la misma que para licencia)
+    function viewInsurancePhoto(imageUrl) {
+        document.getElementById('licensePhotoImg').src = imageUrl;
+        document.getElementById('licensePhotoModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 
+    // Función para descargar póliza
+    function downloadInsurance() {
+        alert('Descargando póliza MAPFRE...');
+        // Aquí iría la lógica real de descarga
+    }
+</script>
 
 
 
