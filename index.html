@@ -1736,73 +1736,7 @@
         }
     }
 </style>
-<style>
-    /* AJUSTE DE POSICIÓN PARA MÓVILES */
-    @media (max-width: 768px) {
-        .modal-content {
-            margin: 10px !important;
-            margin-top: 50px !important; /* BAJAR EL MODAL */
-            max-height: calc(100vh - 100px) !important;
-            overflow-y: auto !important;
-        }
-        
-        .license-photo-modal .license-photo-container {
-            padding-top: 80px !important; /* BAJAR EL ZOOM */
-            padding-bottom: 80px !important;
-        }
-        
-        /* CENTRAR VERTICALMENTE MEJOR */
-        .modal {
-            align-items: flex-start !important; /* Cambiado de center a flex-start */
-            padding-top: 20px !important;
-        }
-        
-        /* SCROLL SUAVE */
-        .modal-body-scrollable {
-            max-height: calc(100vh - 200px) !important;
-        }
-    }
 
-    /* AJUSTES ESPECÍFICOS PARA MÓVILES PEQUEÑOS */
-    @media (max-width: 480px) {
-        .modal-content {
-            margin-top: 30px !important;
-            max-height: calc(100vh - 60px) !important;
-            border-radius: 12px !important;
-        }
-        
-        .modal {
-            padding-top: 10px !important;
-        }
-        
-        .modal-body-scrollable {
-            max-height: calc(100vh - 180px) !important;
-        }
-        
-        /* AUMENTAR ESPACIADO INTERNO */
-        .info-section {
-            margin-bottom: 20px !important;
-            padding-bottom: 15px !important;
-        }
-        
-        .detail-row {
-            margin-bottom: 10px !important;
-            padding: 12px !important;
-        }
-    }
-
-    /* PREVENIR QUE SE SALGA DE LA PANTALLA */
-    .modal-content {
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-
-    /* MEJORAR SCROLL EN MÓVIL */
-    .modal-body-scrollable {
-        -webkit-overflow-scrolling: touch !important;
-        scroll-behavior: smooth !important;
-    }
-</style>
     
 </head>
 <body>
