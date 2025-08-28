@@ -1433,7 +1433,154 @@
         }
     }
 </style>
-    
+ <style>
+    /* MODO OSCURO POR DEFECTO PARA MÓVILES */
+    @media (max-width: 768px) {
+        .modal-content {
+            background: #1e1e1e !important;
+            color: #ffffff !important;
+            border: 1px solid #333 !important;
+        }
+        
+        .modal-close {
+            background: #ff6b6b !important;
+            color: #1e1e1e !important;
+        }
+        
+        .modal-title {
+            color: #ff6b6b !important;
+        }
+        
+        .status-badge {
+            background-color: #2d5a2d !important;
+            color: #a3ffa3 !important;
+            border-color: #a3ffa3 !important;
+        }
+        
+        .detail-row {
+            background: linear-gradient(135deg, #2c2c2c 0%, #222222 100%) !important;
+            border: 1px solid #333 !important;
+        }
+        
+        .detail-label {
+            color: #cccccc !important;
+        }
+        
+        .detail-value {
+            color: #ffd4d7 !important;
+        }
+        
+        .info-section {
+            border-bottom-color: #333 !important;
+        }
+        
+        .info-section h3 {
+            color: #ff6b6b !important;
+        }
+        
+        .doc-thumb {
+            background: linear-gradient(135deg, #2c2c2c 0%, #222222 100%) !important;
+            border-color: #ff6b6b !important;
+            color: #ffffff !important;
+        }
+        
+        .doc-thumb:hover {
+            background: linear-gradient(135deg, #3c1e1e 0%, #2c1e1e 100%) !important;
+        }
+        
+        .doc-thumb i {
+            color: #ff6b6b !important;
+        }
+        
+        .species-item {
+            background: linear-gradient(135deg, #2c2c2c 0%, #222222 100%) !important;
+            border-left-color: #4caf50 !important;
+        }
+        
+        .species-item:hover {
+            background: linear-gradient(135deg, #1e2c1e 0%, #1c221c 100%) !important;
+        }
+        
+        .species-item i {
+            color: #4caf50 !important;
+        }
+        
+        .species-category h4 {
+            color: #ff6b6b !important;
+        }
+        
+        .species-category h4 i {
+            color: #ff6b6b !important;
+        }
+        
+        .modal-actions {
+            border-top-color: #333 !important;
+        }
+        
+        .modal-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #d45c5c 100%) !important;
+        }
+        
+        .modal-btn:hover {
+            background: linear-gradient(135deg, #d45c5c 0%, #b34c4c 100%) !important;
+        }
+        
+        .coverage-list li {
+            background: #2c2c2c !important;
+            border-left-color: #4caf50 !important;
+            color: #cccccc !important;
+        }
+        
+        /* Para el modal de seguro también */
+        .coverage-item {
+            background: linear-gradient(135deg, #2c2c2c 0%, #222222 100%) !important;
+            border-left-color: #ff6b6b !important;
+            color: #ffffff !important;
+        }
+        
+        .coverage-item strong {
+            color: #ff6b6b !important;
+        }
+        
+        .coverage-item p {
+            color: #cccccc !important;
+        }
+        
+        .emergency-item {
+            background: linear-gradient(135deg, #2c1e1e 0%, #221e1e 100%) !important;
+            border-color: #ff6b6b !important;
+            color: #ffffff !important;
+        }
+        
+        .emergency-item strong {
+            color: #ff6b6b !important;
+        }
+        
+        .emergency-item p {
+            color: #ffffff !important;
+        }
+        
+        .emergency-item small {
+            color: #cccccc !important;
+        }
+        
+        .exclusion-list li {
+            background: #2c2c2c !important;
+            border-left-color: #ff6b6b !important;
+            color: #cccccc !important;
+        }
+    }
+
+    /* Para desktop (opcional mantener claro) */
+    @media (min-width: 769px) {
+        .modal-content {
+            background: white;
+            color: #333;
+        }
+        
+        /* ... mantén los estilos claros para desktop ... */
+    }
+ </style>   
 </head>
 <body>
 <div class="card-container">
