@@ -1,7 +1,7 @@
 {
-  "name": "SOCNAS",
-  "short_name": "SOCNAS",
-  "start_url": "/",
+  "name": "CARNET1SOCNAS",
+  "short_name": "CARNET1SOCNAS",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#005f00",
   "theme_color": "#005f00",
