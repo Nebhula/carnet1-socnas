@@ -1,23 +1,23 @@
 {
-  "name": "CARNET1SOCNAS",
-  "short_name": "CARNET1SOCNAS",
+  "name": "CARNET SOCNAS",
+  "short_name": "CARNET SOCNAS",
   "start_url": "/blog-pwa2/index.html",
   "display": "standalone",
   "background_color": "#005f00",
   "theme_color": "#005f00",
-  "description": "Federa tus pájaros Online. Asociación Ornitológica Online. Anilla federadas para ornitología, avicultura, cunicultura de raza y colombicultura.",
+  "description": "Carnet digital socios de SOCNAS, Sociedad Ornitológica Online.",
   "lang": "es",
   "dir": "ltr",
   "orientation": "any",
   "scope": "/blog-pwa2/",
   "icons": [
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzyFYUi3X7NlM4_DZ9q2Y-M8Q_NeZoy5yTxUCBbTq90ogf3KKHdkkciXb_H1u-2IyIjCHIWs4vVGltmEd_Mxctz1JsvGymTmEXLtwkwwQXBFzO4KY0nNjZxSVQ_c1hTKCsrRtIs5waixoWJawtRkUoxQUHyvdInWjOif4uNDlfUpUUMKlO07cjEbKbhvo/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2870%29.png",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilDdkl6QMiv08nYM6pemLs-KfUnXMSCNSFZ0ygqJdGkWG0O99OytnSti-_pbW8y43tKM65M5EF-JIxNLjOJSaVw9sg0BSPrQMpx640q9MXIAijf7-UMh8HNOzeIx6tWAUDrSV8AvripBxVDqHqAwTSkvkaxykayPtFIcnnztGPgFVGGB7romlEdn9i_nU/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20-%202025-10-03T203003.808.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAozr2umwWZYFvdOBKmI6G0o_IORNDPoG1LPJSJI0y5UfD_w0MEyKgDwvjjCbk4DxVIi3k_8vDyVtNTuaVyR-rrXDJ99T9cYCRSEENt5-A8-A-36atog5RuSwCDyuKWou2X71BVXxaxGBV8g5IOdrIEZ5T-C1SLU8kbmXOOC36LP0V7jw7-hC0Ny2Hjlc/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2871%29.png",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilDdkl6QMiv08nYM6pemLs-KfUnXMSCNSFZ0ygqJdGkWG0O99OytnSti-_pbW8y43tKM65M5EF-JIxNLjOJSaVw9sg0BSPrQMpx640q9MXIAijf7-UMh8HNOzeIx6tWAUDrSV8AvripBxVDqHqAwTSkvkaxykayPtFIcnnztGPgFVGGB7romlEdn9i_nU/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20-%202025-10-03T203003.808.png",
       "sizes": "512x512",
       "type": "image/png"
     }
