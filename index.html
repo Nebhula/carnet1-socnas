@@ -1817,12 +1817,16 @@
         <div class="card-body">
             <div class="info-container">
                 <div class="info-block">
-                    <div class="label">Nº LICENCIA</div>
-                    <div class="value" onclick="openModal('licencia')" style="cursor: pointer; position: relative;">
+                    <div class="label">Nº CRIADOR NACIONAL</div>
+                    <div class="value" onclick="openModal('criador')" style="cursor: pointer; position: relative;">
                         56G88
-                        <span class="icon-button" onclick="event.stopPropagation(); openModal('licencia')">i</span>
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('criador')">i</span>
                     </div>
                 </div>
+
+
+
+                
                 <div class="info-block">
                     <div class="label">COD. FEDERAL</div>
                     <div class="value" onclick="openModal('federal')" style="cursor: pointer; position: relative;">
@@ -2042,273 +2046,15 @@
 </div>
 
 <!-- Modales -->
-<div class="modal" id="licenciaModal">
+
+<div class="modal" id="criadorModal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">×</button>
-        <div class="modal-title">
-            <i class="fas fa-id-card"></i> Licencia de Caza 2024
-            <span class="status-badge active">Vigente</span>
-        </div>
-        
-        <div class="modal-body-scrollable">
-           <!-- DATOS DEL TITULAR -->
-            <div class="info-section">
-                <h3>Datos del Titular</h3>
-                <div class="detail-row">
-                    <span class="detail-label">Nombre:</span>
-                    <span class="detail-value">Carlos Ruiz Montes</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">DNI/NIE:</span>
-                    <span class="detail-value">12345678Z</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Domicilio:</span>
-                    <span class="detail-value">C/ Puerto Rico, 21005 Huelva</span>
-                </div>
-            </div>
-
-            <!-- DATOS DE LA LICENCIA -->
-            <div class="info-section">
-                <h3>Datos de la Licencia</h3>
-                <div class="detail-row">
-                    <span class="detail-label">Número:</span>
-                    <span class="detail-value">EX-2024-8876</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Fecha expedición:</span>
-                    <span class="detail-value">15/01/2024</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Validez:</span>
-                    <span class="detail-value">01/01/2024 - 31/12/2024</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Territorio:</span>
-                    <span class="detail-value">Extremadura</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Órgano expedidor:</span>
-                    <span class="detail-value">Consejería Agricultura</span>
-                </div>
-            </div>
-
-            
-
-            <!-- ESPECIES AUTORIZADAS -->
-<div class="info-section">
-    <h3><i class="fas fa-target"></i> Especies Autorizadas</h3>
-    <div class="species-grid">
-        <div class="species-category">
-            <h4><i class="fas fa-deer"></i> Caza Mayor</h4>
-            <div class="species-list">
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Jabalí</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Ciervo</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Gamo</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Cabra montés</span>
-                </div>
-            </div>
-        </div>
-        <div class="species-category">
-            <h4><i class="fas fa-rabbit"></i> Caza Menor</h4>
-            <div class="species-list">
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Conejo</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Liebre</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Perdiz</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Codorniz</span>
-                </div>
-                <div class="species-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Zorro</span>
-                </div>
-            </div>
-        </div>
+        <div class="modal-title">Código Federal</div>
+        <div class="modal-text">Código Federal: E8.0595</div>
+        <button class="modal-action" onclick="closeModal()">E8.0595</button>
     </div>
 </div>
-            <!-- RESTRICCIONES Y NORMATIVA -->
-            <div class="info-section">
-                <h3>Restricciones y Normativa</h3>
-                <div class="coverage-list">
-                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Cupo máximo: 3 piezas/día</li>
-                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Horario: 1h antes amanecer - 1h después atardecer</li>
-                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Prohibido cazar en zonas urbanas</li>
-                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Vedas respetadas según temporada</li>
-                    <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Porte de licencia obligatorio</li>
-                </div>
-            </div>
-            
-            <div class="info-section">
-                <h3>Ver Licencia Física</h3>
-                <div class="document-thumbs">
-                    <!-- BOTÓN ANVERSO -->
-                    <div class="doc-thumb" onclick="viewLicensePhoto('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg')">
-                        <i class="fas fa-id-card"></i>
-                        <span>ANVERSO</span>
-                    </div>
-                    
-                    <!-- BOTÓN REVERSO -->
-                    <div class="doc-thumb" onclick="viewLicensePhoto('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg')">
-                        <i class="fas fa-id-card"></i>
-                        <span>REVERSO</span>
-                    </div>
-                    
-                    <!-- BOTÓN FOTO COMPLETA -->
-                    <div class="doc-thumb" onclick="viewLicensePhoto('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tmQGtJDaJFAemW4dqHCuGJUV1WytulYfguzHNTxKWYcJYyDZz1fZ6fAfraf_rerqTDWuPQC9Je3AViSQBfTQbe854fL6eLBVJ-wQ3i8Hmi55nDWKduDdnYJ0NquMdqsTiMDGcHQMmx_U/s640/10.jpg')">
-                        <i class="fas fa-camera"></i>
-                        <span>FOTO COMPLETA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal-actions">
-            <button class="modal-btn" onclick="closeModal()">
-                <i class="fas fa-times"></i> Cerrar
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Modal para mostrar la foto -->
-<div id="licensePhotoModal" class="license-photo-modal">
-    <div class="license-photo-container">
-        <span class="license-photo-close" onclick="closeLicensePhoto()">×</span>
-        <img id="licensePhotoImg" src="" alt="Licencia Física">
-    </div>
-</div>
-
-
-<script>
-    let currentScale = 1;
-    let isDragging = false;
-    let startX, startY, scrollLeft, scrollTop;
-    let lastTouchDistance = null;
-
-    function viewLicensePhoto(imageUrl) {
-        const img = document.getElementById('licensePhotoImg');
-        img.src = imageUrl;
-        document.getElementById('licensePhotoModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-        resetZoom();
-        img.classList.add('zoomable');
-    }
-
-    function closeLicensePhoto() {
-        document.getElementById('licensePhotoModal').classList.remove('active');
-        document.body.style.overflow = '';
-        resetZoom();
-    }
-
-    function zoomIn() {
-        const img = document.getElementById('licensePhotoImg');
-        if (currentScale < 3) {
-            currentScale += 0.5;
-            applyZoom(img);
-        }
-    }
-
-    function zoomOut() {
-        const img = document.getElementById('licensePhotoImg');
-        if (currentScale > 1) {
-            currentScale -= 0.5;
-            applyZoom(img);
-        }
-    }
-
-    function resetZoom() {
-        currentScale = 1;
-        const img = document.getElementById('licensePhotoImg');
-        img.style.transform = 'scale(1) translate(0, 0)';
-        img.classList.add('zoomable');
-        img.classList.remove('zoomed', 'double-zoomed');
-    }
-
-    function applyZoom(img) {
-        img.style.transform = `scale(${currentScale})`;
-        if (currentScale > 1) {
-            img.classList.remove('zoomable');
-            img.classList.add('zoomed');
-        } else {
-            img.classList.add('zoomable');
-            img.classList.remove('zoomed', 'double-zoomed');
-        }
-    }
-
-    // Eventos táctiles (se mantienen igual)
-    document.getElementById('licensePhotoImg').addEventListener('touchstart', function(e) {
-        if (e.touches.length === 2) {
-            e.preventDefault();
-            const touch1 = e.touches[0];
-            const touch2 = e.touches[1];
-            lastTouchDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
-        } else if (currentScale > 1) {
-            isDragging = true;
-            startX = e.touches[0].pageX - this.offsetLeft;
-            startY = e.touches[0].pageY - this.offsetTop;
-        }
-    });
-
-    document.getElementById('licensePhotoImg').addEventListener('touchmove', function(e) {
-        if (e.touches.length === 2 && lastTouchDistance !== null) {
-            e.preventDefault();
-            const touch1 = e.touches[0];
-            const touch2 = e.touches[1];
-            const currentDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
-            
-            if (lastTouchDistance) {
-                const scaleFactor = currentDistance / lastTouchDistance;
-                currentScale = Math.max(1, Math.min(3, currentScale * scaleFactor));
-                applyZoom(this);
-                lastTouchDistance = currentDistance;
-            }
-        } else if (isDragging) {
-            e.preventDefault();
-            const x = e.touches[0].pageX - this.offsetLeft;
-            const y = e.touches[0].pageY - this.offsetTop;
-            const walkX = (x - startX) * 2;
-            const walkY = (y - startY) * 2;
-            this.style.transform = `scale(${currentScale}) translate(${walkX}px, ${walkY}px)`;
-        }
-    });
-
-    document.getElementById('licensePhotoImg').addEventListener('touchend', function() {
-        isDragging = false;
-        lastTouchDistance = null;
-    });
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeLicensePhoto();
-    });
-
-    document.getElementById('licensePhotoModal').addEventListener('click', function(e) {
-        if (e.target === this) closeLicensePhoto();
-    });
-</script>
-
-
-
 
 
 
