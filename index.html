@@ -1478,6 +1478,32 @@
     }
 }
 
+
+
+
+
+
+
+/* 🔧 FIX: Modales largas en PC - evita que se corten arriba */
+@media (min-width: 769px) {
+  .modal {
+    align-items: flex-start !important;
+    padding-top: 40px; /* margen superior para respirar */
+  }
+
+  .modal-content {
+    max-height: calc(90vh - 80px) !important;
+    overflow-y: auto !important;
+    margin-top: 0 !important;
+  }
+}
+
+
+
+
+
+
+    
 </style>
 
 
