@@ -1609,7 +1609,7 @@
                     <div class="dni-field" onclick="openModal('fecha')" style="cursor: pointer; position: relative;">
                         <span class="dni-text">01/11/2027</span>
 
-                        <span class="icon-button" onclick="event.stopPropagation(); openModal('fecha'); setTimeout(() => { startCountdown(); }, 10);">i</span>
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('fecha'); setTimeout(iniciarContador, 50);">i</span>
                     
                 </div>
             </div>
@@ -2693,40 +2693,37 @@ Carnet de Criador Nacional Federado y anillas federativas a domicilio</div>
 
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const btnInfo = document.querySelector('.icon-button');
-    if (btnInfo) {
-        const originalClick = btnInfo.onclick;
-        btnInfo.onclick = function(e) {
-            if (originalClick) originalClick.call(this, e);
-            setTimeout(() => {
-                const el = document.getElementById('countdown');
-                if (!el) { console.error('❌ No se encontró #countdown'); return; }
-                const target = new Date('2027-11-01').getTime();
-                const update = () => {
-                    const t = target - Date.now();
-                    if (t <= 0) return el.textContent = '¡Vencido!';
-                    const d = Math.floor(t/86400000);
-                    const h = Math.floor((t%86400000)/3600000);
-                    const m = Math.floor((t%3600000)/60000);
-                    const s = Math.floor((t%60000)/1000);
-                    el.textContent = `${d}d ${h}h ${m}m ${s}s`;
-                };
-                update();
-                el._int = setInterval(update, 1000);
-            }, 100);
-        };
-    }
+function iniciarContador() {
+    const el = document.getElementById('countdown');
+    if (!el) return;
 
-    // Limpiar al cerrar cualquier botón de cierre
-    document.querySelectorAll('.modal-close, .modal-action').forEach(btn => {
-        const orig = btn.onclick;
-        btn.onclick = function(e) {
-            const el = document.getElementById('countdown');
-            if (el && el._int) clearInterval(el._int);
-            if (orig) orig.call(this, e);
-        };
-    });
+    const target = new Date('2027-11-01').getTime();
+    const update = () => {
+        const now = new Date().getTime();
+        const diff = target - now;
+        if (diff <= 0) {
+            el.textContent = '¡Vencido!';
+            return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        el.textContent = `${d}d ${h}h ${m}m ${s}s`;
+    };
+    update();
+    el._int = setInterval(update, 1000);
+}
+
+// Limpiar al cerrar
+const closeButtons = document.querySelectorAll('.modal-close, .modal-action');
+closeButtons.forEach(btn => {
+    const original = btn.onclick;
+    btn.onclick = function(e) {
+        const el = document.getElementById('countdown');
+        if (el && el._int) clearInterval(el._int);
+        if (original) original.call(this, e);
+    };
 });
 </script>
 
