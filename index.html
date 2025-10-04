@@ -1609,7 +1609,7 @@
                     <div class="dni-field" onclick="openModal('fecha')" style="cursor: pointer; position: relative;">
                         <span class="dni-text">01/11/2027</span>
 
-                        <span class="icon-button" onclick="event.stopPropagation(); openModal('fecha'); setTimeout(iniciarContador, 50);">i</span>
+                        <span class="icon-button" onclick="event.stopPropagation(); openModal('fecha')">i</span>
                     
                 </div>
             </div>
@@ -2148,7 +2148,7 @@
         <button class="modal-close" onclick="closeModal()">×</button>
         <div class="modal-title">Fecha de Vencimiento</div>
         <div class="modal-text">Vence: 01/11/2027</div>
-       <div id="countdown">Cargando...</div>
+       
         
         <button class="modal-action" onclick="closeModal()">ENTENDIDO</button>
     </div>
@@ -2692,40 +2692,6 @@ Carnet de Criador Nacional Federado y anillas federativas a domicilio</div>
 
 
 
-<script>
-function iniciarContador() {
-    const el = document.getElementById('countdown');
-    if (!el) return;
-
-    const target = new Date('2027-11-01').getTime();
-    const update = () => {
-        const now = new Date().getTime();
-        const diff = target - now;
-        if (diff <= 0) {
-            el.textContent = '¡Vencido!';
-            return;
-        }
-        const d = Math.floor(diff / 86400000);
-        const h = Math.floor((diff % 86400000) / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-        el.textContent = `${d}d ${h}h ${m}m ${s}s`;
-    };
-    update();
-    el._int = setInterval(update, 1000);
-}
-
-// Limpiar al cerrar
-const closeButtons = document.querySelectorAll('.modal-close, .modal-action');
-closeButtons.forEach(btn => {
-    const original = btn.onclick;
-    btn.onclick = function(e) {
-        const el = document.getElementById('countdown');
-        if (el && el._int) clearInterval(el._int);
-        if (original) original.call(this, e);
-    };
-});
-</script>
 
 
 
