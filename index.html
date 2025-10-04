@@ -2182,7 +2182,7 @@ Carnet de Criador Nacional Federado y anillas federativas a domicilio</div>
         <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
         <h2 class="custom-modal-title">San Bartolomé de la Torre</h2>
         <div class="custom-modal-content-wrapper">
-            <div class="custom-map-container">
+            
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.6016292913037!2d-7.112757424410419!3d37.446514672069796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd104abf5c744eff%3A0x33454b80d9e4df3a!2sC.%20Clara%20Campoamor%2C%2021510%2C%20Huelva!5e0!3m2!1ses!2ses!4v1759572319320!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <a class="custom-modal-action" href="https://maps.app.goo.gl/bkR7GFEPkKv3LRs68" target="_blank">VER EN GOOGLE MAPS</a>
@@ -2694,45 +2694,7 @@ Carnet de Criador Nacional Federado y anillas federativas a domicilio</div>
 
 
 
-<script>
-let countdownInterval;
 
-function openModal(tipo) {
-    if (tipo === 'fecha') {
-        document.getElementById('fechaModal').style.display = 'block';
-        startCountdown();
-    }
-}
-
-function closeModal() {
-    document.getElementById('fechaModal').style.display = 'none';
-    if (countdownInterval) {
-        clearInterval(countdownInterval);
-        countdownInterval = null;
-    }
-}
-
-function startCountdown() {
-    const el = document.getElementById('countdown');
-    if (!el) return;
-    const target = new Date('2027-11-01').getTime();
-    const update = () => {
-        const now = new Date().getTime();
-        const diff = target - now;
-        if (diff <= 0) {
-            el.textContent = '¡Vencido!';
-            return;
-        }
-        const d = Math.floor(diff / 86400000);
-        const h = Math.floor((diff % 86400000) / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-        el.textContent = `${d}d ${h}h ${m}m ${s}s`;
-    };
-    update();
-    countdownInterval = setInterval(update, 1000);
-}
-</script>
 
 
 
