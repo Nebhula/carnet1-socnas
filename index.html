@@ -2691,53 +2691,41 @@ Carnet de Criador Nacional Federado y anillas federativas a domicilio</div>
 
 
 
-
-
-
 <script>
-let countdownInterval;
+document.addEventListener('DOMContentLoaded', () => {
+    const btnInfo = document.querySelector('.icon-button');
+    if (btnInfo) {
+        const originalClick = btnInfo.onclick;
+        btnInfo.onclick = function(e) {
+            if (originalClick) originalClick.call(this, e);
+            setTimeout(() => {
+                const el = document.getElementById('countdown');
+                if (!el) { console.error('❌ No se encontró #countdown'); return; }
+                const target = new Date('2027-11-01').getTime();
+                const update = () => {
+                    const t = target - Date.now();
+                    if (t <= 0) return el.textContent = '¡Vencido!';
+                    const d = Math.floor(t/86400000);
+                    const h = Math.floor((t%86400000)/3600000);
+                    const m = Math.floor((t%3600000)/60000);
+                    const s = Math.floor((t%60000)/1000);
+                    el.textContent = `${d}d ${h}h ${m}m ${s}s`;
+                };
+                update();
+                el._int = setInterval(update, 1000);
+            }, 100);
+        };
+    }
 
-function startCountdown() {
-    // Si ya hay un intervalo, lo limpiamos
-    if (countdownInterval) clearInterval(countdownInterval);
-    
-    const el = document.getElementById('countdown');
-    if (!el) return;
-
-    const target = new Date('2027-11-01').getTime();
-
-    const update = () => {
-        const now = new Date().getTime();
-        const diff = target - now;
-
-        if (diff <= 0) {
-            el.textContent = '¡Vencido!';
-            return;
-        }
-
-        const d = Math.floor(diff / 86400000);
-        const h = Math.floor((diff % 86400000) / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-
-        el.textContent = `${d}d ${h}h ${m}m ${s}s`;
-    };
-
-    update();
-    countdownInterval = setInterval(update, 1000);
-}
-
-// Aseguramos que al cerrar se limpie (sin tocar tu closeModal)
-const btnsClose = document.querySelectorAll('.modal-close, .modal-action');
-btnsClose.forEach(btn => {
-    const originalOnClick = btn.onclick;
-    btn.onclick = function(e) {
-        if (countdownInterval) {
-            clearInterval(countdownInterval);
-            countdownInterval = null;
-        }
-        if (originalOnClick) originalOnClick.call(this, e);
-    };
+    // Limpiar al cerrar cualquier botón de cierre
+    document.querySelectorAll('.modal-close, .modal-action').forEach(btn => {
+        const orig = btn.onclick;
+        btn.onclick = function(e) {
+            const el = document.getElementById('countdown');
+            if (el && el._int) clearInterval(el._int);
+            if (orig) orig.call(this, e);
+        };
+    });
 });
 </script>
 
