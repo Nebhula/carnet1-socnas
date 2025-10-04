@@ -1,53 +1,64 @@
-const CACHE_NAME = 'pwa-cache-v1';
-const OFFLINE_URL = '/offline.html'; // Puedes crear esta página más tarde
+// Nombre de la caché (cambia el número cuando quieras forzar limpieza)
+const CACHE_NAME = "pwa-cache-v2";
+
+// Página de respaldo si no hay conexión
+const OFFLINE_URL = "/offline.html";
+
+// Archivos principales que se guardan para uso offline
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon-192x192.png',
-  '/icon-512x512.png',
-  '/style.css', // Si tienes CSS propio
-  '/script.js'  // Si tienes JS adicional
+  "/",
+  "/index.html",
+  "/manifest.json",
+  "/icon-192x192.png",
+  "/icon-512x512.png",
+  "/style.css",
+  "/script.js",
+  "/offline.html"
 ];
 
-self.addEventListener('install', event => {
+// Instalación: guarda los assets básicos
+self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(ASSETS_TO_CACHE);
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
   );
   self.skipWaiting();
 });
 
-self.addEventListener('activate', event => {
+// Activación: limpia cachés antiguas
+self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(keyList => {
-      return Promise.all(keyList.map(key => {
-        if (key !== CACHE_NAME) {
-          return caches.delete(key);
-        }
-      }));
+    caches.keys().then(keys => {
+      return Promise.all(
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      );
     })
   );
   self.clients.claim();
 });
 
-self.addEventListener('fetch', event => {
+// Estrategia: Network First (usa lo nuevo si hay conexión, caché si no)
+self.addEventListener("fetch", event => {
   const { request } = event;
-
-  // Solo interceptar solicitudes GET
-  if (request.method !== 'GET') {
-    return;
-  }
+  if (request.method !== "GET") return;
 
   event.respondWith(
-    caches.match(request).then(response => {
-      return response || fetch(request).catch(() => {
-        // Responder con página offline si no hay conexión
-        if (request.mode === 'navigate') {
-          return caches.match(OFFLINE_URL);
-        }
-      });
-    })
+    fetch(request)
+      .then(response => {
+        const cloned = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(request, cloned));
+        return response;
+      })
+      .catch(() =>
+        caches.match(request).then(cached => {
+          if (cached) return cached;
+          if (request.mode === "navigate") {
+            return caches.match(OFFLINE_URL);
+          }
+        })
+      )
   );
 });
