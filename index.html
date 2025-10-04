@@ -2148,7 +2148,7 @@
         <button class="modal-close" onclick="closeModal()">×</button>
         <div class="modal-title">Fecha de Vencimiento</div>
         <div class="modal-text">Vence: 01/11/2027</div>
-        <div id="countdown"></div>
+       
         <button class="modal-action" onclick="closeModal()">ENTENDIDO</button>
     </div>
 </div>
@@ -2689,50 +2689,7 @@ Carnet de Criador Nacional Federado y anillas federativas a domicilio</div>
 
 
 
-<script>
-let countdownInterval;
 
-// Observador: cuando el modal de fecha se muestre, inicia el contador
-const fechaModal = document.getElementById('fechaModal');
-const observer = new MutationObserver(() => {
-    if (fechaModal.style.display === 'block' || fechaModal.style.display === 'flex') {
-        if (!countdownInterval) startCountdown();
-    }
-});
-
-observer.observe(fechaModal, { attributes: true, attributeFilter: ['style'] });
-
-function startCountdown() {
-    const el = document.getElementById('countdown');
-    if (!el) return;
-    const target = new Date('2027-11-01').getTime();
-    const update = () => {
-        const now = new Date().getTime();
-        const diff = target - now;
-        if (diff <= 0) {
-            el.textContent = '¡Vencido!';
-            return;
-        }
-        const d = Math.floor(diff / 86400000);
-        const h = Math.floor((diff % 86400000) / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-        el.textContent = `${d}d ${h}h ${m}m ${s}s`;
-    };
-    update();
-    countdownInterval = setInterval(update, 1000);
-}
-
-// Limpia el contador al cerrar (sin tocar tu closeModal)
-const originalClose = window.closeModal;
-window.closeModal = function() {
-    if (countdownInterval) {
-        clearInterval(countdownInterval);
-        countdownInterval = null;
-    }
-    if (originalClose) originalClose();
-};
-</script>
 
 
 
