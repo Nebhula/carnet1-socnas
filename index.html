@@ -705,6 +705,32 @@
 
 
 
+/* Elimina cualquier scroll innecesario en PWA */
+html, body {
+    overflow: hidden;
+    height: 100%;
+    max-height: 100vh;
+}
+.card-container {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    flex: 1;
+    overflow: hidden;
+    min-height: auto !important;
+    height: 100%;
+}
+
+
+
+
+        
+
+
+
         
 
 /* ESTILOS DEL REVERSO (COPIA ESTO TAL CUAL) */
