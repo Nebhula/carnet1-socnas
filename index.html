@@ -700,7 +700,11 @@
 
 
 
-
+@supports (-webkit-touch-callout: none) {
+  .card-header {
+    padding-top: calc(20px + env(safe-area-inset-top));
+  }
+}
 
 
 
