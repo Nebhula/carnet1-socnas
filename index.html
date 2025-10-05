@@ -708,7 +708,16 @@
 
 
 
-
+/* ✅ Solución universal para iOS PWA */
+@supports (-webkit-touch-callout: none) {
+  html {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  body {
+    padding-top: 0 !important;
+  }
+}
 
 
 
